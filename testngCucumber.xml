@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Test Automation Suite">
+    <listeners>
+        <listener class-name="Listeners.TestAllureListener"/>
+        <listener class-name="Listeners.TestListener"/>
+    </listeners>
+    <test name="Test On Chrome">
+        <parameter name="Browser" value="Chrome"></parameter>
+        <parameter name="URL" value="https://healthi-test.cegedim.com/stk-cas-web/login"></parameter>
+        <classes>
+            <class name="cucumber.runner.TestRunner"/>
+        </classes>
+    </test>
+
+</suite>
