@@ -3,7 +3,4 @@ rder -Dversion=0.7.7.0  -Dpackaging=jar -DgeneratePom=true
 
 # mvn install:install-file -Dfile=D:\Healthi-Framework\Data\monte-screen-recorder-0.7.7.0.jar -DgroupId=com.github.stephenc.monte -DartifactId=monte-
 screen-recorder -Dversion=0.7.7.0  -Dpackaging=jar -DgeneratePom=true
-<<<<<<< HEAD
 
-=======
->>>>>>> 7c64f1770fc6b968d4c408bd4c5c97b33b69324a

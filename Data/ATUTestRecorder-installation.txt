@@ -1,8 +1,6 @@
-<<<<<<< HEAD
+
 # mvn install:install-file -Dfile={Path}/ATUTestRecorder_2.1.jar -DgroupId=org.aut.tm -DartifactId=cxf-bundle -Dversion=2.1 -Dpackaging=jar
-=======
-# mvn install:install-file -Dfile={Path}/ATUTestRecorder_2.1.jar -DgroupId=org.aut.tm -DartifactId=cxf-bundle -Dversion=2.7.3 -Dpackaging=jar
->>>>>>> 7c64f1770fc6b968d4c408bd4c5c97b33b69324a
+
 
 # mvn install:install-file -Dfile=D:\Healthi-Framework\Data\ATUTestRecorder_2.1.jar -DgroupId=org.aut.tm -DartifactId=ATUTestRecorder -Dversion=2.1 -Dpacka
 ging=jar
