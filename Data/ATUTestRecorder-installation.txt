@@ -1,4 +1,3 @@
-
 # mvn install:install-file -Dfile={Path}/ATUTestRecorder_2.1.jar -DgroupId=org.aut.tm -DartifactId=cxf-bundle -Dversion=2.1 -Dpackaging=jar
 
 
