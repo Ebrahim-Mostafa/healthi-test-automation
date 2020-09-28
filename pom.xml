@@ -27,6 +27,7 @@
 
 
     <dependencies>
+
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
@@ -45,7 +46,6 @@
             <artifactId>testng</artifactId>
             <version>7.1.0</version>
         </dependency>
-
 
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
@@ -235,6 +235,16 @@
                         <version>${aspectj.version}</version>
                     </dependency>
                 </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.7.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>3.0.0</version>
             </plugin>
         </plugins>
     </build>
