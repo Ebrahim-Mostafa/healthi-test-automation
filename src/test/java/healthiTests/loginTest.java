@@ -2,6 +2,7 @@ package healthiTests;
 
 import BasePackage.BasePage;
 import BasePackage.BaseTest;
+import Jira.JiraPolicy;
 import Pages.healthiScreens.loginPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -16,16 +17,17 @@ public class loginTest extends BaseTest {
         loginPage = new loginPage();
     }
 
+    @JiraPolicy(logTicketReady=false)
     @Test
     public void signIn() {
-//        BrowserMobProxyLogger.printBrowserMobProxyResults();
+//      BrowserMobProxyLogger.printBrowserMobProxyResults();
 //      MonteScreenRecorder.startRecording("signIn");
         loginPage.fillUserTextBox("sa001");
         loginPage.fillPasswordTextBox("goport!!");
         loginPage.clickOnSignInButton();
         String expectedURL = "https://healthi-test.cegedim.com/dtf-healthi/view.xhtml";
         Assert.assertEquals(BasePage.getPageCurrentURL(), expectedURL);
-//        Assert.fail();
+//       Assert.fail();
 //      MonteScreenRecorder.stopRecording();
     }
 }

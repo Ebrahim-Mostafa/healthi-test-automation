@@ -4,7 +4,8 @@
 <suite name="Test Automation Suite">
     <listeners>
         <listener class-name="Listeners.TestAllureListener"/>
-        <listener class-name="Listeners.TestListener"/>
+        <listener class-name="Listeners.TestJiraListener"/>
+        <listener class-name="Listeners.TestScreenCaptureListener"/>
     </listeners>
     <test name="Test On Chrome">
         <parameter name="Browser" value="Chrome"></parameter>

@@ -8,9 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Level;
 
-import static Utilities.Utils.fileInfo;
-import static Utilities.Utils.fileLocation;
-import static Utilities.Utils.fileName;
+import static Utilities.Utils.*;
 
 
 public class PrefsLogger {

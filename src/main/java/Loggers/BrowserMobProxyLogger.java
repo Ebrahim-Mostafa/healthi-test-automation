@@ -17,10 +17,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-import static Utilities.Utils.fileInfo;
-import static Utilities.Utils.fileLocation;
-import static Utilities.Utils.fileName;
 import static BasePackage.BrowserOptions.proxyServer;
+import static Utilities.Utils.*;
 
 
 public class BrowserMobProxyLogger {
