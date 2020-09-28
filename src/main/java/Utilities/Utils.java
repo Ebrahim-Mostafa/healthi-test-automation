@@ -32,7 +32,7 @@ public class Utils {
         LocalDateTime date = LocalDateTime.now();
         String formattedDateTime = date.format(formatter);
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        String screenshotLocation = System.getProperty("user.dir") + "./screenshots/";
+        String screenshotLocation = System.getProperty("user.dir") +File.separator+"screenshots";
 //      StackTraceElement[] methodNameofTest = Thread.currentThread().getStackTrace();
         FileUtils.copyFile(scrFile, new File(screenshotLocation + "/" + methodNameofTest + "_" + formattedDateTime + ".png"));
 //        }

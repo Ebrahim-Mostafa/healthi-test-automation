@@ -38,7 +38,7 @@ public class BrowserOptions {
         //      options.addArguments("--verbose");
 //      options.addArguments("--window-size=1980,1080");
         options.setAcceptInsecureCerts(true);
-        options.addArguments("--incognito");
+//        options.addArguments("--incognito");
 //      options.addArguments("--start-fullscreen");
         options.addArguments("--start-maximized");
 //      options.addArguments("--headless");

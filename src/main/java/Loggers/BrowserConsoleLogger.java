@@ -11,11 +11,9 @@ import java.io.PrintStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import static Utilities.Utils.fileInfo;
-import static Utilities.Utils.fileLocation;
-import static Utilities.Utils.fileName;
 
 import static BasePackage.BaseTest.driver;
+import static Utilities.Utils.*;
 import static org.aspectj.bridge.MessageUtil.fail;
 
 public class BrowserConsoleLogger {
