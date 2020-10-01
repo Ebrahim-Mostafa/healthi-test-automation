@@ -2,6 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Test Automation Suite" parallel="tests" thread-count="2">
     <listeners>
+        <listener class-name="Analyzer.RetryTransformer"/>
         <listener class-name="Listeners.TestAllureListener"/>
         <listener class-name="Listeners.TestJiraListener"/>
         <listener class-name="Listeners.TestScreenCaptureListener"/>

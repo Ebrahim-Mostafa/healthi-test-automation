@@ -18,7 +18,7 @@ public class loginTest extends BaseTest {
     }
 
     @JiraPolicy(logTicketReady=false)
-    @Test
+    @Test  //(retryAnalyzer = RetryAnalyzer.class)
     public void signIn() {
 //      BrowserMobProxyLogger.printBrowserMobProxyResults();
 //      MonteScreenRecorder.startRecording("signIn");

@@ -3,6 +3,7 @@
 
 <suite name="Test Automation Suite">
     <listeners>
+        <listener class-name="Analyzer.RetryTransformer"/>
         <listener class-name="Listeners.TestAllureListener"/>
         <listener class-name="Listeners.TestJiraListener"/>
         <listener class-name="Listeners.TestScreenCaptureListener"/>
