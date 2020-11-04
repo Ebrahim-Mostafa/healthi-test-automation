@@ -11,7 +11,6 @@ import java.io.File;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Random;
 import java.util.concurrent.Executors;
 
 import static BasePackage.BaseTest.driver;
@@ -32,7 +31,7 @@ public class Utils {
         LocalDateTime date = LocalDateTime.now();
         String formattedDateTime = date.format(formatter);
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        String screenshotLocation = System.getProperty("user.dir") +File.separator+"screenshots";
+        String screenshotLocation = System.getProperty("user.dir") + File.separator + "screenshots";
 //      StackTraceElement[] methodNameofTest = Thread.currentThread().getStackTrace();
         FileUtils.copyFile(scrFile, new File(screenshotLocation + "/" + methodNameofTest + "_" + formattedDateTime + ".png"));
 //        }
@@ -50,15 +49,6 @@ public class Utils {
 
     public static void startVideo(String method) throws Exception {
         MonteScreenRecorder.startRecording(method);
-    }
-
-
-    public int randomNumbers(int min, int max) {
-        Random r = new Random();
-        int Low = min;
-        int High = max;
-        int Result = r.nextInt(High - Low) + Low;
-        return Result;
     }
 
     public void RuntimeExec() throws IOException, InterruptedException {
