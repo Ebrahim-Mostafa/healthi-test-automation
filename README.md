@@ -21,9 +21,7 @@ the dependency after adding the missing tags:<br />
 <dependency>
 <groupId>atu.testng.reports.ATUTestRecorder</groupId>
 <artifactId>ATUTestRecorder</artifactId>
-<scope>system</scope> 
 <version>2.1</version> 
-<systemPath>${basedir}\Data\ATUTestRecorder_2.1.jar</systemPath>
 </dependency>
 ```
 ============================<br />
