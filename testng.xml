@@ -13,7 +13,8 @@
         <parameter name="URL" value="https://healthi-test.cegedim.com/stk-cas-web/login"></parameter>
 
         <classes>
-            <class name="healthiTests.loginTest"/>
+            <class name="healthiTests.loginTestJsonPOC"/>
+            <!--<class name="healthiTests.loginTest"/>
             <class name="healthiTests.patientSearchTest"/>
             <class name="healthiTests.opticianEHRTest"/>
             <class name="mecsTests.appointmentTest">
@@ -25,7 +26,7 @@
             <class name="mecsTests.consultationTest"/>
             <class name="mecsTests.managementPlanTest"/>
             <class name="mecsTests.outcomeTest"/>
-            <class name="healthiTests.logoutTest"/>
+            <class name="healthiTests.logoutTest"/>-->
         </classes>
     </test> <!-- configuration annotation Test -->
 
