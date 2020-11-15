@@ -1,0 +1,13 @@
+{
+  "Login":
+{ "txt_username":"id;username",
+"txt_password":"id;password",
+"btn_login":"id;entrar",
+"RecoverPass":"id;recoverPassId"
+},"logout":
+{
+  "RecoverPass": "id;recoverPassId"
+}
+}
+
+

@@ -1,0 +1,149 @@
+[1603031683.351][INFO]: Starting ChromeDriver 86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}) on port 4171
+[1603031683.351][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1603031683.710][INFO]: [111ee98054e9dd6ccb56ad5257044fbd] COMMAND InitSession {
+   "capabilities": {
+      "firstMatch": [ {
+         "acceptInsecureCerts": true,
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [ "--start-maximized", "--silent", "--disable-web-security", "--ignore-certificate-errors", "--allow-running-insecure-content", "--allow-insecure-localhost" ],
+            "extensions": [  ]
+         },
+         "proxy": {
+            "httpProxy": "192.168.1.4:61076",
+            "proxyType": "manual",
+            "sslProxy": "192.168.1.4:61076"
+         }
+      } ]
+   },
+   "desiredCapabilities": {
+      "acceptInsecureCerts": true,
+      "browserName": "chrome",
+      "goog:chromeOptions": {
+         "args": [ "--start-maximized", "--silent", "--disable-web-security", "--ignore-certificate-errors", "--allow-running-insecure-content", "--allow-insecure-localhost" ],
+         "extensions": [  ]
+      },
+      "loggingPrefs": {
+         "browser": "ALL"
+      },
+      "proxy": {
+         "httpProxy": "192.168.1.4:61076",
+         "proxyType": "MANUAL",
+         "sslProxy": "192.168.1.4:61076"
+      }
+   }
+}
+[1603031683.718][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1603031683.722][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1603031683.730][INFO]: Launching chrome: "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --allow-insecure-localhost --allow-running-insecure-content --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --disable-web-security --enable-automation --enable-blink-features=ShadowDOMV0 --enable-logging --ignore-certificate-errors --log-level=0 --no-first-run --password-store=basic --proxy-server=http=192.168.1.4:61076;https=192.168.1.4:61076 --remote-debugging-port=0 --silent --start-maximized --test-type=webdriver --use-mock-keychain --user-data-dir="C:\Users\yzakareya\AppData\Local\Temp\scoped_dir17600_1200851826" data:,
+[1603031684.594][DEBUG]: DevTools HTTP Request: http://localhost:61080/json/version
+[1603031685.015][DEBUG]: DevTools HTTP Response: {
+   "Browser": "Chrome/86.0.4240.75",
+   "Protocol-Version": "1.3",
+   "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36",
+   "V8-Version": "8.6.395.10",
+   "WebKit-Version": "537.36 (@c69c33933bfc72a159aceb4aeca939eb0087416c)",
+   "webSocketDebuggerUrl": "ws://localhost:61080/devtools/browser/3072377f-3d5b-44b7-b20a-37e6b3afacbc"
+}
+
+[1603031685.015][DEBUG]: DevTools HTTP Request: http://localhost:61080/json/list
+[1603031685.132][DEBUG]: DevTools HTTP Response: [ {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:61080/devtools/page/A3520F212149D1B4D20E6A694FD99BDE",
+   "id": "A3520F212149D1B4D20E6A694FD99BDE",
+   "title": "",
+   "type": "page",
+   "url": "data:,",
+   "webSocketDebuggerUrl": "ws://localhost:61080/devtools/page/A3520F212149D1B4D20E6A694FD99BDE"
+} ]
+
+[1603031685.207][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1603031687.211][DEBUG]: DevTools WebSocket Command: Security.setIgnoreCertificateErrors (id=1) browser {
+   "ignore": true
+}
+[1603031687.212][DEBUG]: DevTools WebSocket Response: Security.setIgnoreCertificateErrors (id=1) browser {
+
+}
+[1603031687.212][DEBUG]: DevTools HTTP Request: http://localhost:61080/json/list
+[1603031687.213][DEBUG]: DevTools HTTP Response: [ {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:61080/devtools/page/A3520F212149D1B4D20E6A694FD99BDE",
+   "id": "A3520F212149D1B4D20E6A694FD99BDE",
+   "title": "data:,",
+   "type": "page",
+   "url": "data:,",
+   "webSocketDebuggerUrl": "ws://localhost:61080/devtools/page/A3520F212149D1B4D20E6A694FD99BDE"
+} ]
+
+[1603031687.214][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1603031691.214][WARNING]: Timed out connecting to Chrome, retrying...
+[1603031691.215][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1603031695.221][DEBUG]: failed to connect to localhost (error -102)
+[1603031695.221][DEBUG]: DevTools HTTP Request: http://localhost:61080/json/list
+[1603031699.229][DEBUG]: DevTools HTTP Request failed
+[1603031699.230][INFO]: [111ee98054e9dd6ccb56ad5257044fbd] RESPONSE InitSession ERROR session not created
+from chrome not reachable
+  (Session info: chrome=86.0.4240.75)
+[1603031699.230][DEBUG]: Log type 'driver' lost 1 entries on destruction
+[1603031699.230][DEBUG]: Log type 'browser' lost 0 entries on destruction

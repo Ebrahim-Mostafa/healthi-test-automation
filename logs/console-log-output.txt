@@ -1,0 +1,40 @@
+I am in onStart method Test On Chrome
+
+
+
+2020-10-14 17:13:47 INFO  Log4JLogger:25 - ****************************** Starting test cases execution on TEST environment *****************************************
+Chrome browser will start!
+Starting ChromeDriver 85.0.4183.87 (cd6713ebf92fa1cacc0f1a598df280093af0c5d7-refs/branch-heads/4183@{#1689}) on port 12212
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Oct 14, 2020 5:14:00 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+
+
+Oct 14, 2020 5:14:03 PM io.cucumber.core.runtime.FeaturePathFeatureSupplier get
+WARNING: No features found at classpath:/healthiTests
+
+
+
+
+I am in onTestStart method signIn start
+
+I am in onTestSuccess method signIn succeed
+
+//---------------------------
+RUNNING IN ENVIRONMENT: https://healthi-test.cegedim.com/stk-cas-web/login
+STARTING TEST Class Name : healthiTests.loginTestJsonPOC ====== MethodName:signIn.
+//---------------------------
+
+
+????????????????????????????????????????????????????????????????????????????
+
+? View your Cucumber Report at:                                            ?
+? https://reports.cucumber.io/reports/e46a723d-d5a3-46d6-8d1b-39af8fc7827a ?
+?                                                                          ?
+? This report will self-destruct in 24h unless it is claimed or deleted.   ?
+????????????????????????????????????????????????????????????????????????????
+
+2020-10-14 17:14:14 INFO  Log4JLogger:54 - ****************************** Browser is closed *****************************************
+

@@ -1,0 +1,7 @@
+Found error in logs: https://healthi-test.cegedim.com/img/common/loading.gif - Failed to load resource: the server responded with a status of 404 (Not Found)
+I am in onFinish method Test On Chrome
+I am in onStart method Test On Chrome
+Chrome browser will start!
+I am in onTestStart method runScenario start
+I am in onTestSkipped method runScenario skipped
+I am in onFinish method Test On Chrome

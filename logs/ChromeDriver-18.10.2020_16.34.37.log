@@ -1,0 +1,305 @@
+[1603031677.900][INFO]: Starting ChromeDriver 86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}) on port 38372
+[1603031677.900][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1603031678.030][INFO]: [07c1f3dbcd303b24836fdc2f294b9058] COMMAND InitSession {
+   "capabilities": {
+      "firstMatch": [ {
+         "acceptInsecureCerts": true,
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [ "--start-maximized", "--silent", "--disable-web-security", "--ignore-certificate-errors", "--allow-running-insecure-content", "--allow-insecure-localhost" ],
+            "extensions": [  ]
+         },
+         "proxy": {
+            "httpProxy": "192.168.1.4:61022",
+            "proxyType": "manual",
+            "sslProxy": "192.168.1.4:61022"
+         }
+      } ]
+   },
+   "desiredCapabilities": {
+      "acceptInsecureCerts": true,
+      "browserName": "chrome",
+      "goog:chromeOptions": {
+         "args": [ "--start-maximized", "--silent", "--disable-web-security", "--ignore-certificate-errors", "--allow-running-insecure-content", "--allow-insecure-localhost" ],
+         "extensions": [  ]
+      },
+      "loggingPrefs": {
+         "browser": "ALL"
+      },
+      "proxy": {
+         "httpProxy": "192.168.1.4:61022",
+         "proxyType": "MANUAL",
+         "sslProxy": "192.168.1.4:61022"
+      }
+   }
+}
+[1603031678.035][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1603031678.038][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1603031678.041][INFO]: Launching chrome: "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --allow-insecure-localhost --allow-running-insecure-content --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --disable-web-security --enable-automation --enable-blink-features=ShadowDOMV0 --enable-logging --ignore-certificate-errors --log-level=0 --no-first-run --password-store=basic --proxy-server=http=192.168.1.4:61022;https=192.168.1.4:61022 --remote-debugging-port=0 --silent --start-maximized --test-type=webdriver --use-mock-keychain --user-data-dir="C:\Users\yzakareya\AppData\Local\Temp\scoped_dir15912_575355948" data:,
+[1603031678.477][DEBUG]: DevTools HTTP Request: http://localhost:61026/json/version
+[1603031678.805][DEBUG]: DevTools HTTP Response: {
+   "Browser": "Chrome/86.0.4240.75",
+   "Protocol-Version": "1.3",
+   "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36",
+   "V8-Version": "8.6.395.10",
+   "WebKit-Version": "537.36 (@c69c33933bfc72a159aceb4aeca939eb0087416c)",
+   "webSocketDebuggerUrl": "ws://localhost:61026/devtools/browser/27d0264b-4098-47b4-aec5-c48a5ec4bf7e"
+}
+
+[1603031678.805][DEBUG]: DevTools HTTP Request: http://localhost:61026/json/list
+[1603031678.818][DEBUG]: DevTools HTTP Response: [ {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:61026/devtools/page/165BD881AA77EB36C833ED00C59EAE5B",
+   "id": "165BD881AA77EB36C833ED00C59EAE5B",
+   "title": "",
+   "type": "page",
+   "url": "data:,",
+   "webSocketDebuggerUrl": "ws://localhost:61026/devtools/page/165BD881AA77EB36C833ED00C59EAE5B"
+} ]
+
+[1603031678.852][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1603031680.858][DEBUG]: DevTools WebSocket Command: Security.setIgnoreCertificateErrors (id=1) browser {
+   "ignore": true
+}
+[1603031680.859][DEBUG]: DevTools WebSocket Response: Security.setIgnoreCertificateErrors (id=1) browser {
+
+}
+[1603031680.859][DEBUG]: DevTools HTTP Request: http://localhost:61026/json/list
+[1603031680.861][DEBUG]: DevTools HTTP Response: [ {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:61026/devtools/page/165BD881AA77EB36C833ED00C59EAE5B",
+   "id": "165BD881AA77EB36C833ED00C59EAE5B",
+   "title": "data:,",
+   "type": "page",
+   "url": "data:,",
+   "webSocketDebuggerUrl": "ws://localhost:61026/devtools/page/165BD881AA77EB36C833ED00C59EAE5B"
+} ]
+
+[1603031680.863][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1603031682.866][DEBUG]: DevTools WebSocket Command: Page.addScriptToEvaluateOnNewDocument (id=1) 165BD881AA77EB36C833ED00C59EAE5B {
+   "source": "(function () {window.cdc_adoQpoasnfa76pfcZLmcfl_Array = window.Array;window.cdc_adoQpoasnfa76pfcZLmcfl_Promise = window.Promise;window.cdc_adoQpoasnfa76pfcZLmcfl_Symbol = window.Symbol;}) ();"
+}
+[1603031682.866][DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=2) 165BD881AA77EB36C833ED00C59EAE5B {
+   "expression": "(function () {window.cdc_adoQpoasnfa76pfcZLmcfl_Array = window.Array;window.cdc_adoQpoasnfa76pfcZLmcfl_Promise = window.Promise;window.cdc_adoQpoasnfa76pfcZLmcfl_Symbol = window.Symbol;}) ();"
+}
+[1603031682.867][DEBUG]: DevTools WebSocket Command: Log.enable (id=3) 165BD881AA77EB36C833ED00C59EAE5B {
+
+}
+[1603031682.867][DEBUG]: DevTools WebSocket Command: DOM.getDocument (id=4) 165BD881AA77EB36C833ED00C59EAE5B {
+
+}
+[1603031682.867][DEBUG]: DevTools WebSocket Command: Target.setAutoAttach (id=5) 165BD881AA77EB36C833ED00C59EAE5B {
+   "autoAttach": true,
+   "flatten": true,
+   "waitForDebuggerOnStart": false
+}
+[1603031682.867][DEBUG]: DevTools WebSocket Command: Page.enable (id=6) 165BD881AA77EB36C833ED00C59EAE5B {
+
+}
+[1603031682.867][DEBUG]: DevTools WebSocket Command: Page.enable (id=7) 165BD881AA77EB36C833ED00C59EAE5B {
+
+}
+[1603031682.867][DEBUG]: DevTools WebSocket Response: Page.addScriptToEvaluateOnNewDocument (id=1) 165BD881AA77EB36C833ED00C59EAE5B {
+   "identifier": "1"
+}
+[1603031682.868][DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=2) 165BD881AA77EB36C833ED00C59EAE5B {
+   "result": {
+      "type": "undefined"
+   }
+}
+[1603031682.868][DEBUG]: DevTools WebSocket Response: Log.enable (id=3) 165BD881AA77EB36C833ED00C59EAE5B {
+
+}
+[1603031682.868][DEBUG]: DevTools WebSocket Response: DOM.getDocument (id=4) 165BD881AA77EB36C833ED00C59EAE5B {
+   "root": {
+      "backendNodeId": 2,
+      "baseURL": "data:,",
+      "childNodeCount": 1,
+      "children": [ {
+         "attributes": [  ],
+         "backendNodeId": 3,
+         "childNodeCount": 2,
+         "children": [ {
+            "attributes": [  ],
+            "backendNodeId": 4,
+            "childNodeCount": 0,
+            "localName": "head",
+            "nodeId": 3,
+            "nodeName": "HEAD",
+            "nodeType": 1,
+            "nodeValue": "",
+            "parentId": 2
+         }, {
+            "attributes": [  ],
+            "backendNodeId": 5,
+            "childNodeCount": 0,
+            "localName": "body",
+            "nodeId": 4,
+            "nodeName": "BODY",
+            "nodeType": 1,
+            "nodeValue": "",
+            "parentId": 2
+         } ],
+         "frameId": "165BD881AA77EB36C833ED00C59EAE5B",
+         "localName": "html",
+         "nodeId": 2,
+         "nodeName": "HTML",
+         "nodeType": 1,
+         "nodeValue": "",
+         "parentId": 1
+      } ],
+      "documentURL": "data:,",
+      "localName": "",
+      "nodeId": 1,
+      "nodeName": "#document",
+      "nodeType": 9,
+      "nodeValue": "",
+      "xmlVersion": ""
+   }
+}
+[1603031682.868][DEBUG]: DevTools WebSocket Response: Target.setAutoAttach (id=5) 165BD881AA77EB36C833ED00C59EAE5B {
+
+}
+[1603031682.868][DEBUG]: DevTools WebSocket Response: Page.enable (id=6) 165BD881AA77EB36C833ED00C59EAE5B {
+
+}
+[1603031682.868][DEBUG]: DevTools WebSocket Response: Page.enable (id=7) 165BD881AA77EB36C833ED00C59EAE5B {
+
+}
+[1603031682.868][DEBUG]: DevTools WebSocket Command: Runtime.enable (id=8) 165BD881AA77EB36C833ED00C59EAE5B {
+
+}
+[1603031682.869][DEBUG]: DevTools WebSocket Event: Runtime.executionContextCreated 165BD881AA77EB36C833ED00C59EAE5B {
+   "context": {
+      "auxData": {
+         "frameId": "165BD881AA77EB36C833ED00C59EAE5B",
+         "isDefault": true,
+         "type": "default"
+      },
+      "id": 1,
+      "name": "",
+      "origin": "://"
+   }
+}
+[1603031682.869][DEBUG]: DevTools WebSocket Response: Runtime.enable (id=8) 165BD881AA77EB36C833ED00C59EAE5B {
+
+}
+[1603031682.869][DEBUG]: DevTools WebSocket Command: Page.enable (id=9) 165BD881AA77EB36C833ED00C59EAE5B {
+
+}
+[1603031682.870][DEBUG]: DevTools WebSocket Response: Page.enable (id=9) 165BD881AA77EB36C833ED00C59EAE5B {
+
+}
+[1603031682.870][DEBUG]: DevTools WebSocket Command: Runtime.enable (id=10) 165BD881AA77EB36C833ED00C59EAE5B {
+
+}
+[1603031682.871][DEBUG]: DevTools WebSocket Response: Runtime.enable (id=10) 165BD881AA77EB36C833ED00C59EAE5B {
+
+}
+[1603031682.871][DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=11) 165BD881AA77EB36C833ED00C59EAE5B {
+   "awaitPromise": true,
+   "expression": "(function() { // Copyright (c) 2012 The Chromium Authors. All rights reserved.\n// Use of this source code is governed by a BSD-style license that can be\n// found in the LICENSE file.\n\n/**\n * Enum f...",
+   "returnByValue": true
+}
+[1603031682.875][DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=11) 165BD881AA77EB36C833ED00C59EAE5B {
+   "result": {
+      "type": "object",
+      "value": {
+         "status": 0,
+         "value": 1
+      }
+   }
+}
+[1603031682.875][INFO]: [07c1f3dbcd303b24836fdc2f294b9058] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": true,
+      "browserName": "chrome",
+      "browserVersion": "86.0.4240.75",
+      "chrome": {
+         "chromedriverVersion": "86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378})",
+         "userDataDir": "C:\\Users\\yzakareya\\AppData\\Local\\Temp\\scoped_dir15912_575355948"
+      },
+      "goog:chromeOptions": {
+         "debuggerAddress": "localhost:61026"
+      },
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "normal",
+      "platformName": "windows",
+      "proxy": {
+         "httpProxy": "192.168.1.4:61022",
+         "proxyType": "manual",
+         "sslProxy": "192.168.1.4:61022"
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 300000,
+         "script": 30000
+      },
+      "unhandledPromptBehavior": "dismiss and notify",
+      "webauthn:virtualAuthenticators": true
+   },
+   "sessionId": "07c1f3dbcd303b24836fdc2f294b9058"
+}

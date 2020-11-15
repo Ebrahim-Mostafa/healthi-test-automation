@@ -1,0 +1,8 @@
+Found error in logs: https://healthi-test.cegedim.com/img/common/loading.gif - Failed to load resource: the server responded with a status of 404 (Not Found)
+I am in onFinish method Test On Chrome
+
+===============================================
+Test Automation Suite
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+
