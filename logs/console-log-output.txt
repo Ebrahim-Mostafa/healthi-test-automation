@@ -2,39 +2,71 @@ I am in onStart method Test On Chrome
 
 
 
-2020-10-14 17:13:47 INFO  Log4JLogger:25 - ****************************** Starting test cases execution on TEST environment *****************************************
 Chrome browser will start!
-Starting ChromeDriver 85.0.4183.87 (cd6713ebf92fa1cacc0f1a598df280093af0c5d7-refs/branch-heads/4183@{#1689}) on port 12212
+log4j:WARN No appenders could be found for logger (Loggers.Log4JLogger).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Starting ChromeDriver 86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}) on port 37315
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-Oct 14, 2020 5:14:00 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+Nov 16, 2020 2:20:12 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
+Before navigating to: 'https://healthi-test.cegedim.com/stk-cas-web/login'
+Navigated to:'https://healthi-test.cegedim.com/stk-cas-web/login'
 
 
-Oct 14, 2020 5:14:03 PM io.cucumber.core.runtime.FeaturePathFeatureSupplier get
+Nov 16, 2020 2:20:16 PM io.cucumber.core.runtime.FeaturePathFeatureSupplier get
 WARNING: No features found at classpath:/healthiTests
 
 
+Trying to find Element By : By.id: username
+Found Element By : By.id: username
+Trying to find Element By : By.id: password
+Found Element By : By.id: password
+Trying to find Element By : By.id: entrar
+Found Element By : By.id: entrar
+Trying to find Element By : By.id: recoverPassId
+Found Element By : By.id: recoverPassId
 
 
 I am in onTestStart method signIn start
+Value of the:[[ChromeDriver: chrome on WINDOWS (18898266f65254c26824cf9ae10314bd)] -> id: username] before any changes made
+Element value changed to: [[ChromeDriver: chrome on WINDOWS (18898266f65254c26824cf9ae10314bd)] -> id: username]
+Trying to click on: [[ChromeDriver: chrome on WINDOWS (18898266f65254c26824cf9ae10314bd)] -> id: username]
+Clicked on: [[ChromeDriver: chrome on WINDOWS (18898266f65254c26824cf9ae10314bd)] -> id: username]
+Value of the:[[ChromeDriver: chrome on WINDOWS (18898266f65254c26824cf9ae10314bd)] -> id: username] before any changes made
+Element value changed to: [[ChromeDriver: chrome on WINDOWS (18898266f65254c26824cf9ae10314bd)] -> id: username]
+Value of the:[[ChromeDriver: chrome on WINDOWS (18898266f65254c26824cf9ae10314bd)] -> id: password] before any changes made
+Element value changed to: [[ChromeDriver: chrome on WINDOWS (18898266f65254c26824cf9ae10314bd)] -> id: password]
+Value of the:[[ChromeDriver: chrome on WINDOWS (18898266f65254c26824cf9ae10314bd)] -> id: password] before any changes made
+Element value changed to: [[ChromeDriver: chrome on WINDOWS (18898266f65254c26824cf9ae10314bd)] -> id: password]
+Value of the:[[ChromeDriver: chrome on WINDOWS (18898266f65254c26824cf9ae10314bd)] -> id: password] before any changes made
+Element value changed to: [[ChromeDriver: chrome on WINDOWS (18898266f65254c26824cf9ae10314bd)] -> id: password]
+Trying to click on: [[ChromeDriver: chrome on WINDOWS (18898266f65254c26824cf9ae10314bd)] -> id: entrar]
+Clicked on: [[ChromeDriver: chrome on WINDOWS (18898266f65254c26824cf9ae10314bd)] -> id: entrar]
 
 I am in onTestSuccess method signIn succeed
 
 //---------------------------
 RUNNING IN ENVIRONMENT: https://healthi-test.cegedim.com/stk-cas-web/login
-STARTING TEST Class Name : healthiTests.loginTestJsonPOC ====== MethodName:signIn.
+STARTING TEST Class Name : healthiTests.loginTestJsonPOC :::::: MethodName:signIn.
 //---------------------------
 
 
-????????????????????????????????????????????????????????????????????????????
 
-? View your Cucumber Report at:                                            ?
-? https://reports.cucumber.io/reports/e46a723d-d5a3-46d6-8d1b-39af8fc7827a ?
-?                                                                          ?
-? This report will self-destruct in 24h unless it is claimed or deleted.   ?
-????????????????????????????????????????????????????????????????????????????
-
-2020-10-14 17:14:14 INFO  Log4JLogger:54 - ****************************** Browser is closed *****************************************
+???????????????????????????????????????????????????????????????????????????????
+? Share your Cucumber Report with your team at https://reports.cucumber.io    ?
+? Activate publishing with one of the following:                              ?
+?                                                                             ?
+? src/test/resources/cucumber.properties:    cucumber.publish.enabled=
+true    ?
+? Environment variable:                      CUCUMBER_PUBLISH_ENABLED=true    ?
+? JUnit:                                     @CucumberOptions(publish = true) ?
+?                                                                             ?
+? More information at https://reports.cucumber.io/docs/cucumber-jvm           ?
+?                                                                             ?
+? To disable this message, add cucumber.publish.quiet=true to                 ?
+? src/test/resources/cucumber.properties                                      ?
+???????????????????????????????????????????????????????????????????????????????
 
