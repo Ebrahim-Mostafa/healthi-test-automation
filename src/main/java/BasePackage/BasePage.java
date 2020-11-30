@@ -1,5 +1,7 @@
 package BasePackage;
 
+import Utilities.TimeUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
@@ -10,6 +12,7 @@ import static BasePackage.BaseTest.driver;
 
 
 public class BasePage {
+
 
     public BasePage(){
         PageFactory.initElements(driver,this);
@@ -37,8 +40,8 @@ public class BasePage {
 
         // To switch back to parent ID after complete the test
         DriverFactory.getDriver().switchTo().window(parentWindowID);
-
     }
+
     public static String getPageCurrentURL() {
         String currentURL = null;
         try {
@@ -57,5 +60,42 @@ public class BasePage {
             System.out.println("some exception occurred while getting the title " + title);
         }
         return title;
+    }
+
+    public static WebElement getElement(By locator) {
+        WebElement element = null;
+        try {
+            element = driver.findElement(locator);
+        } catch (Exception e) {
+            System.out.println("Some exception occured while creating webelement " + locator);
+        }
+        return element;
+    }
+
+    public static boolean elementIsDisplayed(By locator) {
+        TimeUtils.waitElement((WebElement) locator,15);
+        return getElement(locator).isDisplayed();
+    }
+
+    public static boolean elementIsEnabled(By locator) {
+        TimeUtils.waitElement((WebElement) locator,15);
+        return getElement(locator).isEnabled();
+    }
+
+    public static String getText(By locator) {
+        TimeUtils.waitElement((WebElement) locator,15);
+        return getElement(locator).getText();
+    }
+
+    public static void elementClick(By locator) {
+        getElement(locator).click();
+    }
+
+    public static void elementClear(By locator) {
+        getElement(locator).clear();
+    }
+
+    public static void elementSendKeys(By locator, String value) {
+        getElement(locator).sendKeys(value);
     }
 }

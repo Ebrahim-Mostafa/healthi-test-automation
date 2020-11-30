@@ -48,7 +48,7 @@ public class consultationPage extends BasePage {
     public void insertDateOfConsultation() {
         dateOfConsultation.clear();
         dateOfConsultation.click();
-        dateOfConsultation.sendKeys("28/09/2020");
+        dateOfConsultation.sendKeys("01/12/2020");
     }
 
     public void insertTimeOfConsultation() {

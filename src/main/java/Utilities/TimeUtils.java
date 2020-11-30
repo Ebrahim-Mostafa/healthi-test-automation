@@ -1,7 +1,6 @@
 package Utilities;
 
 
-
 import BasePackage.DriverFactory;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;

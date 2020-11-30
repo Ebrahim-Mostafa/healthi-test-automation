@@ -23,14 +23,13 @@ public class loginPage extends BasePage {
         userName.click();
 //        String username = "sa001";
         userName.sendKeys(username);
-//        Utils.setTextElementText(userName,username);
     }
 
     public void fillPasswordTextBox(String password) {
         Password.clear();
         Password.clear();
 //        String password="goport!!";
-          Password.sendKeys(password);
+        Password.sendKeys(password);
 //        BasePage.setTextElementText(Password,password);
     }
 
