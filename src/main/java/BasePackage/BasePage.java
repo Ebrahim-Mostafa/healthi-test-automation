@@ -1,14 +1,16 @@
 package BasePackage;
 
+import com.jayway.jsonpath.JsonPath;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
-import com.jayway.jsonpath.JsonPath;
-import org.openqa.selenium.By;
+
 import static BasePackage.BaseTest.driver;
 
 
@@ -109,5 +111,52 @@ public class BasePage {
                 break;
         }
         return Element;
+    }
+    public static List<WebElement> getObjectLocatorList(String jsonpath)
+    {
+
+        String filename = System.getProperty("user.dir") + "/src/test/resources/ObjRepo.json";
+        jsonFile = new File(filename);
+        String locatorProperty = null;
+
+        try {
+            locatorProperty = JsonPath.read(jsonFile, jsonpath).toString();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        String locatorType = locatorProperty.split(";")[0];
+        String locatorValue = locatorProperty.split(";")[1];
+
+        List<WebElement> Elements = null;
+        switch(locatorType)
+        {
+            case "id":
+                Elements = driver.findElements(By.id(locatorValue));
+                break;
+            case "name":
+                Elements = driver.findElements(By.name(locatorValue));
+                break;
+
+            case "class":
+                Elements = driver.findElements(By.className(locatorValue));
+                break;
+            case "css":
+                Elements = driver.findElements(By.cssSelector(locatorValue));
+                break;
+            case "link":
+                Elements = driver.findElements(By.linkText(locatorValue));
+                break;
+            case "partial":
+                Elements = driver.findElements(By.partialLinkText(locatorValue));
+                break;
+            case "tag":
+                Elements = driver.findElements(By.tagName(locatorValue));
+                break;
+            case "xpath":
+                Elements = driver.findElements(By.xpath(locatorValue));
+                break;
+        }
+        return Elements;
     }
 }

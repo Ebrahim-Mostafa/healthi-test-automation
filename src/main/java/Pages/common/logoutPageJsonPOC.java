@@ -1,22 +1,28 @@
-package Pages.healthiScreens;
+package Pages.common;
 
 import BasePackage.BasePage;
 import BasePackage.DriverFactory;
 import Utilities.JSUtils;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 
-public class logoutPage extends BasePage {
-    @FindBy(xpath = "//div[@class='profile-image fa']")
+public class logoutPageJsonPOC extends BasePage {
+
+        /*@FindBy(xpath = "//div[@class='profile-image fa']")
     //div[@class='profile-info']
-    //span[@class='topbar-item-name profile-role']
-    //span[@class='topbar-item-name profile-name truncate100']
-    WebElement profileInfo;
+            //span[@class='topbar-item-name profile-role']
+            //span[@class='topbar-item-name profile-name truncate100']
+            WebElement profileInfo;
 
     @FindBy(xpath = "//a[@class='logoutLink']")
-    WebElement logOut;
+    WebElement logOut;*/
 
-    public logoutPage() {
+    //profile Info button WebElement declaration
+    WebElement profileInfo = BasePage.getObjectLocator("$.Logout.ProfileInfoButton");
+
+    //Logout button webElement declaration
+    WebElement logOut = BasePage.getObjectLocator("$.Logout.LogoutButton");
+
+    public logoutPageJsonPOC() {
         BasePage.switchToWindow();
     }
 

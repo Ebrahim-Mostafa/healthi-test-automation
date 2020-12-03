@@ -1,4 +1,4 @@
-package Pages.healthiScreens;
+package Pages.common;
 
 import BasePackage.BasePage;
 import org.openqa.selenium.WebElement;
@@ -21,6 +21,8 @@ public class LoginPageJsonPOC extends BasePage {
     //Recover Password button webElement declaration
     WebElement recoverPassId = BasePage.getObjectLocator("$.Login.RecoverPass");
 
+    //Standard Role Button
+    //WebElement StandardRole = BasePage.getObjectLocator("$.RolePage.StandardRoleButton");
 
     public void fillUserTextBox(String username) {
         userName.clear();
@@ -46,5 +48,10 @@ public class LoginPageJsonPOC extends BasePage {
     public void clickOnCantAccessAccount() {
         recoverPassId.click();
     }
+
+    /*public void clickOnStandard()
+    {
+        StandardRole.click();
+    }*/
 
 }

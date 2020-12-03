@@ -4,10 +4,19 @@
 "txt_password":"id;password",
 "btn_login":"id;entrar",
 "RecoverPass":"id;recoverPassId"
-},"logout":
+},"Logout":
 {
-  "RecoverPass": "id;recoverPassId"
-}
+  "ProfileInfoButton": "xpath;//div[@class='profile-image fa']",
+  "LogoutButton": "xpath;//a[@class='logoutLink']"
+},
+  "RolePage":
+  {
+    "StandardRoleButton": "xpath;//table[@class='listado']//tr[@class='odd']//a"
+  },
+  "DashBoard":
+  {
+    "ActionPendingTable": "xpath;//table[@class='MuiTable-root']//thead//tr"
+  }
 }
 
 
