@@ -1,17 +1,21 @@
 {
   "Login":
-{ "txt_username":"id;username",
-"txt_password":"id;password",
-"btn_login":"id;entrar",
-"RecoverPass":"id;recoverPassId"
-},"Logout":
-{
-  "ProfileInfoButton": "xpath;//div[@class='profile-image fa']",
-  "LogoutButton": "xpath;//a[@class='logoutLink']"
-},
+  { "txt_username":"id;username",
+    "txt_password":"id;password",
+    "btn_login":"id;entrar",
+    "RecoverPass":"id;recoverPassId"
+  },
+  "Logout":
+  {
+    "ProfileInfoButtonHealthi": "xpath;//div[@class='profile-image fa']",
+    "ProfileInfoButtonPharmacy": "xpath;//div[contains(text(),'Pharmacist')]",
+    "LogoutButtonHealthi": "xpath;//a[@class='logoutLink']",
+    "LogoutButtonPharmacy": "xpath;//li[contains(text(),'Sign Out')]"
+  },
   "RolePage":
   {
-    "StandardRoleButton": "xpath;//table[@class='listado']//tr[@class='odd']//a"
+    "RestrictedRoleButton":"xpath;//a[contains(text(),'Pharmacist UK (Restricted)')]",
+    "StandardRoleButton": "xpath;//a[contains(text(),'Pharmacist UK (Standard)')]"
   },
   "DashBoard":
   {

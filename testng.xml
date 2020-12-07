@@ -15,24 +15,23 @@
         <parameter name="URL" value="https://healthi-test.cegedim.com/stk-cas-web/login"/>
 
         <classes>
-            <class name="healthiTests.LoginNewScreenTest"/>
-            <class name="healthiTests.GetActionsTableTextTest"/>
-            <!--<class name="healthiTests.loginTestJsonPOC"/>-->
-            <!--<class name="healthiTests.logoutTestJsonPOC"/>-->
-            <!--<class name="healthiTests.logoutTest"/>-->
-            <!--<class name="healthiTests.loginTest"/>
-            <class name="healthiTests.patientSearchTest"/>
-            <class name="healthiTests.opticianEHRTest"/>
-            <class name="mecsTests.appointmentTest">
+            <class name="tests.pharmacyTests.loginScreenTest"/>
+            <class name="tests.pharmacyTests.GetActionsTableTextTest"/>
+            <class name="tests.pharmacyTests.logoutScreenTest"/>
+            <class name="tests.healthiTests.logoutTest"/>
+            <class name="tests.healthiTests.loginTest"/>
+            <class name="tests.healthiTests.patientSearchTest"/>
+            <class name="tests.healthiTests.opticianEHRTest"/>
+            <class name="tests.mecsTests.appointmentTest">
                 <methods>
                     <include name="saveAndContinueBtn"/>
                     <exclude name="saveAndExitBtn"/>
                 </methods>
             </class>
-            <class name="mecsTests.consultationTest"/>
-            <class name="mecsTests.managementPlanTest"/>
-            <class name="mecsTests.outcomeTest"/>
-            <class name="healthiTests.logoutTest"/>-->
+            <class name="tests.mecsTests.consultationTest"/>
+            <class name="tests.mecsTests.managementPlanTest"/>
+            <class name="tests.mecsTests.outcomeTest"/>
+            <class name="tests.healthiTests.logoutTest"/>
         </classes>
     </test> <!-- configuration annotation Test -->
 

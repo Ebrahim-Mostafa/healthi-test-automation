@@ -1,7 +1,7 @@
-package healthiTests;
+package tests.healthiTests;
 
 import BasePackage.BaseTest;
-import Pages.healthiScreens.opticianEHRPage;
+import pages.healthiScreens.opticianEHRPage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 

@@ -1,7 +1,6 @@
 package Utilities;
 
 
-
 import BasePackage.DriverFactory;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -11,11 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
-
-
 public class TimeUtils {
-
-//    public static WebDriverWait wait;
 
     public static void explicitWait(int timeoutinseconds) {
         new WebDriverWait(DriverFactory.getDriver(),timeoutinseconds);

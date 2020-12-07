@@ -1,28 +1,20 @@
-package Pages.common;
+package pages.common;
 
 import BasePackage.BasePage;
 import BasePackage.DriverFactory;
 import Utilities.JSUtils;
+import Utilities.ObjectRepositoryJsonParser;
 import org.openqa.selenium.WebElement;
 
-public class logoutPageJsonPOC extends BasePage {
-
-        /*@FindBy(xpath = "//div[@class='profile-image fa']")
-    //div[@class='profile-info']
-            //span[@class='topbar-item-name profile-role']
-            //span[@class='topbar-item-name profile-name truncate100']
-            WebElement profileInfo;
-
-    @FindBy(xpath = "//a[@class='logoutLink']")
-    WebElement logOut;*/
+public class LogoutPage extends BasePage {
 
     //profile Info button WebElement declaration
-    WebElement profileInfo = BasePage.getObjectLocator("$.Logout.ProfileInfoButton");
+    WebElement profileInfo = ObjectRepositoryJsonParser.getObjectLocator("$.Logout.ProfileInfoButtonPharmacy");
 
     //Logout button webElement declaration
-    WebElement logOut = BasePage.getObjectLocator("$.Logout.LogoutButton");
+    WebElement logOut = ObjectRepositoryJsonParser.getObjectLocator("$.Logout.LogoutButtonPharmacy");
 
-    public logoutPageJsonPOC() {
+    public LogoutPage() {
         BasePage.switchToWindow();
     }
 

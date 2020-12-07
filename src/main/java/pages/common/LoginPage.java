@@ -1,28 +1,26 @@
-package Pages.common;
+package pages.common;
 
 import BasePackage.BasePage;
+import Utilities.ObjectRepositoryJsonParser;
 import org.openqa.selenium.WebElement;
 
 
-public class LoginPageJsonPOC extends BasePage {
-
-
-    //ObjectRepositoryJsonParser json = new ObjectRepositoryJsonParser(filename);
+public class LoginPage extends BasePage {
 
     //username webElement declaration
-    WebElement userName = BasePage.getObjectLocator("$.Login.txt_username");
+    WebElement userName = ObjectRepositoryJsonParser.getObjectLocator("$.Login.txt_username");
+
+    //WebElement userName = null;
+//    ObjectRepositoryJsonParser.getObjectLocator("$.Login.txt_username",WebElement userName);
 
     //password webElement declaration
-    WebElement Password = BasePage.getObjectLocator("$.Login.txt_password");
+    WebElement Password = ObjectRepositoryJsonParser.getObjectLocator("$.Login.txt_password");
 
     //Sign in button webElement declaration
-    WebElement signIn = BasePage.getObjectLocator("$.Login.btn_login");
+    WebElement signIn = ObjectRepositoryJsonParser.getObjectLocator("$.Login.btn_login");
 
     //Recover Password button webElement declaration
-    WebElement recoverPassId = BasePage.getObjectLocator("$.Login.RecoverPass");
-
-    //Standard Role Button
-    //WebElement StandardRole = BasePage.getObjectLocator("$.RolePage.StandardRoleButton");
+    WebElement recoverPassId = ObjectRepositoryJsonParser.getObjectLocator("$.Login.RecoverPass");
 
     public void fillUserTextBox(String username) {
         userName.clear();
@@ -49,9 +47,17 @@ public class LoginPageJsonPOC extends BasePage {
         recoverPassId.click();
     }
 
-    /*public void clickOnStandard()
+
+    public void clickOnStandard()
     {
+        WebElement StandardRole = ObjectRepositoryJsonParser.getObjectLocator("$.RolePage.StandardRoleButton");
         StandardRole.click();
-    }*/
+    }
+
+    public void clickOnRestricte()
+    {
+        WebElement RestricteRole = ObjectRepositoryJsonParser.getObjectLocator("$.RolePage.RestricteRoleButton");
+        RestricteRole.click();
+    }
 
 }

@@ -1,4 +1,4 @@
-package Pages.healthiScreens;
+package pages.healthiScreens;
 
 import BasePackage.BasePage;
 import Utilities.JSUtils;

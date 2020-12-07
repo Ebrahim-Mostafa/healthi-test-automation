@@ -1,20 +1,20 @@
-package healthiTests;
+package tests.healthiTests;
 
 import BasePackage.BasePage;
 import BasePackage.BaseTest;
 import Jira.JiraPolicy;
-import Pages.common.LoginPageJsonPOC;
+import pages.healthiScreens.loginPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 
-public class loginTestJsonPOC extends BaseTest {
-    public static LoginPageJsonPOC loginPage;
+public class loginTest extends BaseTest {
+    public static loginPage loginPage;
 
     @BeforeClass
     public void initialization() {
-        loginPage = new LoginPageJsonPOC();
+        loginPage = new loginPage();
     }
 
     @JiraPolicy(logTicketReady=false)

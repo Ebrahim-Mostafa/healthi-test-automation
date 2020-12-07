@@ -1,20 +1,21 @@
-package healthiTests;
+package tests.pharmacyTests;
 
 import BasePackage.BasePage;
 import BasePackage.BaseTest;
 import Jira.JiraPolicy;
-import Pages.healthiScreens.loginPage;
+import pages.common.LoginPage;
+//import pages.pharmacyScreens.rolePage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+public class loginScreenTest extends BaseTest {
 
-public class loginTest extends BaseTest {
-    public static loginPage loginPage;
+    public static LoginPage loginPage;
 
     @BeforeClass
     public void initialization() {
-        loginPage = new loginPage();
+        loginPage = new LoginPage();
     }
 
     @JiraPolicy(logTicketReady=false)
@@ -22,13 +23,17 @@ public class loginTest extends BaseTest {
     public void signIn() {
 //      BrowserMobProxyLogger.printBrowserMobProxyResults();
 //      MonteScreenRecorder.startRecording("signIn");
-        loginPage.fillUserTextBox("sa001");
+        loginPage.fillUserTextBox("apple01");
         loginPage.fillPasswordTextBox("goport!!");
         loginPage.clickOnSignInButton();
-        String expectedURL = "https://healthi-test.cegedim.com/dtf-healthi/view.xhtml";
-        Assert.assertEquals(BasePage.getPageCurrentURL(), expectedURL);
+        String roleURL = "https://healthi-test.cegedim.com/suite-webapp/role/list.html";
+        Assert.assertEquals(BasePage.getPageCurrentURL(), roleURL);
+        loginPage.clickOnStandard();
+        String dashboardURL = "https://healthi-test.cegedim.com/pharmacy/Dashboard";
+        Assert.assertEquals(BasePage.getPageCurrentURL(), dashboardURL);
 //       Assert.fail();
 //      MonteScreenRecorder.stopRecording();
     }
+
 }
 

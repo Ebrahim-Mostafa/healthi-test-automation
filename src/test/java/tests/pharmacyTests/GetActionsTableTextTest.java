@@ -1,8 +1,8 @@
-package healthiTests;
+package tests.pharmacyTests;
 
 import BasePackage.BaseTest;
 import Jira.JiraPolicy;
-import Pages.pharmacyScreens.dashBoardPage;
+import pages.pharmacyScreens.dashBoardPage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
