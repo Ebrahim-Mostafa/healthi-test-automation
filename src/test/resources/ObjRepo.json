@@ -1,0 +1,26 @@
+{
+  "Login":
+  { "txt_username":"id;username",
+    "txt_password":"id;password",
+    "btn_login":"id;entrar",
+    "RecoverPass":"id;recoverPassId"
+  },
+  "Logout":
+  {
+    "ProfileInfoButtonHealthi": "xpath;//div[@class='profile-image fa']",
+    "ProfileInfoButtonPharmacy": "xpath;//div[contains(text(),'Pharmacist')]",
+    "LogoutButtonHealthi": "xpath;//a[@class='logoutLink']",
+    "LogoutButtonPharmacy": "xpath;//li[contains(text(),'Sign Out')]"
+  },
+  "RolePage":
+  {
+    "RestrictedRoleButton":"xpath;//a[contains(text(),'Pharmacist UK (Restricted)')]",
+    "StandardRoleButton": "xpath;//a[contains(text(),'Pharmacist UK (Standard)')]"
+  },
+  "DashBoard":
+  {
+    "ActionPendingTable": "xpath;//table[@class='MuiTable-root']//thead//tr"
+  }
+}
+
+

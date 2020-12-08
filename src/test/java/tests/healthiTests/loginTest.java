@@ -1,9 +1,9 @@
-package healthiTests;
+package tests.healthiTests;
 
 import BasePackage.BasePage;
 import BasePackage.BaseTest;
 import Jira.JiraPolicy;
-import Pages.healthiScreens.loginPage;
+import pages.healthiScreens.loginPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;

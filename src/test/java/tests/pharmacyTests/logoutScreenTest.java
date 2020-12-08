@@ -1,16 +1,16 @@
-package healthiTests;
+package tests.pharmacyTests;
 
 import BasePackage.BaseTest;
-import Pages.healthiScreens.logoutPage;
+import pages.common.LogoutPage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class logoutTest extends BaseTest {
-    public static logoutPage logoutPage;
+public class logoutScreenTest extends BaseTest {
+    public static LogoutPage logoutPage;
 
     @BeforeClass
     public void initialization(){
-        logoutPage=new logoutPage();
+        logoutPage=new LogoutPage();
     }
 
     @Test
