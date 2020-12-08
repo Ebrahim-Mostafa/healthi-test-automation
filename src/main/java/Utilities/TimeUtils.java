@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 public class TimeUtils {
 
-//    public static WebDriverWait wait;
+
 
     public static void explicitWait(int timeoutinseconds) {
         new WebDriverWait(DriverFactory.getDriver(),timeoutinseconds);

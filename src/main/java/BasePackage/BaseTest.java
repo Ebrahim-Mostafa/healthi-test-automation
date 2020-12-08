@@ -20,8 +20,8 @@ import static Loggers.Log4JLogger.logger;
 public class BaseTest extends AbstractTestNGCucumberTests {
     //public static ATUTestRecord recorder;
     public static WebDriver driver;
-    public static EventFiringWebDriver firingWebDriver;
-    public static WebEventListener eventListener;
+    private static EventFiringWebDriver firingWebDriver;
+    private static WebEventListener eventListener;
 
 
     @Parameters(value = {"Browser", "ENV", "URL"})
