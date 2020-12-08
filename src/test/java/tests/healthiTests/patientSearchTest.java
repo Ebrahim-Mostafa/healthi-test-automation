@@ -1,4 +1,4 @@
-package healthiTests;
+package tests.healthiTests;
 
 import BasePackage.BaseTest;
 import pages.healthiScreens.patientSearchPage;
