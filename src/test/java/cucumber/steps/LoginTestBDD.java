@@ -2,7 +2,7 @@ package cucumber.steps;
 
 import BasePackage.BasePage;
 import BasePackage.BaseTest;
-import Pages.healthiScreens.loginPage;
+import pages.healthiScreens.loginPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

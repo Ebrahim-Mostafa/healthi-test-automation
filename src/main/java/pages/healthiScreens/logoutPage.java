@@ -1,4 +1,4 @@
-package Pages.healthiScreens;
+package pages.healthiScreens;
 
 import BasePackage.BasePage;
 import BasePackage.DriverFactory;
@@ -9,9 +9,9 @@ import org.openqa.selenium.support.FindBy;
 public class logoutPage extends BasePage {
     @FindBy(xpath = "//div[@class='profile-image fa']")
     //div[@class='profile-info']
-            //span[@class='topbar-item-name profile-role']
-            //span[@class='topbar-item-name profile-name truncate100']
-            WebElement profileInfo;
+    //span[@class='topbar-item-name profile-role']
+    //span[@class='topbar-item-name profile-name truncate100']
+    WebElement profileInfo;
 
     @FindBy(xpath = "//a[@class='logoutLink']")
     WebElement logOut;

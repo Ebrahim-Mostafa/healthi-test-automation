@@ -1,4 +1,4 @@
-package Pages.mecScreens;
+package pages.mecScreens;
 
 import BasePackage.BasePage;
 import org.openqa.selenium.WebElement;

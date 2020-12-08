@@ -1,7 +1,7 @@
-package mecsTests;
+package tests.mecsTests;
 
 import BasePackage.BaseTest;
-import Pages.mecScreens.consultationPage;
+import pages.mecScreens.consultationPage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
