@@ -18,6 +18,8 @@ import static Loggers.PrefsLogger.logPrefs;
 public class BrowserOptions {
 
     public static BrowserMobProxy proxyServer;
+    public static Proxy seleniumProxy,zapProxy;
+//    public static String ZAP_Proxy="localhost:8080";
 
     public static ChromeOptions chromeOptions() {
 
@@ -26,13 +28,15 @@ public class BrowserOptions {
         WebDriverManager.chromedriver().setup();
         DesiredCapabilities capabilities = new DesiredCapabilities();
         proxyServer = BrowserMobProxyLogger.getProxyServer();
-        Proxy seleniumProxy = BrowserMobProxyLogger.getSeleniumProxy(proxyServer);
+        seleniumProxy = BrowserMobProxyLogger.getSeleniumProxy(proxyServer);
         capabilities.setCapability(CapabilityType.PROXY, seleniumProxy);
         capabilities.setCapability(CapabilityType.LOGGING_PREFS, logPrefs);
         PrefsLogger.getChromeLoggingPrefs();
         proxyServer.setHarCaptureTypes(CaptureType.REQUEST_HEADERS, CaptureType.RESPONSE_HEADERS);
 //      proxyServer.setHarCaptureTypes(CaptureType.REQUEST_CONTENT, CaptureType.RESPONSE_CONTENT);
 //      System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
+        /** zapProxy = new Proxy();
+         zapProxy.setHttpProxy(ZAP_Proxy).setFtpProxy(ZAP_Proxy).setSslProxy(ZAP_Proxy);**/
         ChromeOptions options = new ChromeOptions();
         options.merge(capabilities);
         //      options.addArguments("--verbose");
@@ -50,6 +54,7 @@ public class BrowserOptions {
         options.addArguments("--allow-insecure-localhost");
 //      options.addArguments("--no-sandbox");
 //      options.addArguments("--disable-gpu");
+        options.setCapability(CapabilityType.PROXY,zapProxy);
         return options;
     }
 

@@ -55,7 +55,7 @@ public class appointmentPage extends BasePage {
     public void insertDateOfInitialContact() {
         dateOfInitialContact.clear();
         dateOfInitialContact.click();
-        dateOfInitialContact.sendKeys("28/09/2020");
+        dateOfInitialContact.sendKeys("01/12/2020");
     }
 
     public void inserTimeOfInitialContact() {
@@ -92,7 +92,7 @@ public class appointmentPage extends BasePage {
     public void insertDateOfAppointment() {
         dateOfAppointment.clear();
         dateOfAppointment.click();
-        dateOfAppointment.sendKeys("28/09/2020");
+        dateOfAppointment.sendKeys("01/12/2020");
     }
 
     public void insertTimeOfAppointment() {
