@@ -2,9 +2,9 @@ package tests.mecsTests;
 
 import BasePackage.BasePage;
 import BasePackage.BaseTest;
-import pages.mecScreens.appointmentPage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import pages.mecScreens.appointmentPage;
 
 public class appointmentTest extends BaseTest {
     public static appointmentPage appointmentPage;

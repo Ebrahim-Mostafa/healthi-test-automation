@@ -18,8 +18,9 @@ import static Loggers.PrefsLogger.logPrefs;
 public class BrowserOptions {
 
     public static BrowserMobProxy proxyServer;
-    public static Proxy seleniumProxy,zapProxy;
-//    public static String ZAP_Proxy="localhost:8080";
+    private static Proxy seleniumProxy,zapProxy;
+/*  private static String ZAP_Proxy = ZAP_PROXYHOST+":"+ZAP_PROXYPORT;
+    private static String ZAP_Proxy = ZAP_HOST+":"+ZAP_PORT;*/
 
     public static ChromeOptions chromeOptions() {
 
@@ -31,15 +32,16 @@ public class BrowserOptions {
         seleniumProxy = BrowserMobProxyLogger.getSeleniumProxy(proxyServer);
         capabilities.setCapability(CapabilityType.PROXY, seleniumProxy);
         capabilities.setCapability(CapabilityType.LOGGING_PREFS, logPrefs);
+//      ZAPScanner.zapSetup(); ZAPScanner
         PrefsLogger.getChromeLoggingPrefs();
         proxyServer.setHarCaptureTypes(CaptureType.REQUEST_HEADERS, CaptureType.RESPONSE_HEADERS);
 //      proxyServer.setHarCaptureTypes(CaptureType.REQUEST_CONTENT, CaptureType.RESPONSE_CONTENT);
 //      System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
-        /** zapProxy = new Proxy();
-         zapProxy.setHttpProxy(ZAP_Proxy).setFtpProxy(ZAP_Proxy).setSslProxy(ZAP_Proxy);**/
+/*        zapProxy = new Proxy();
+        zapProxy.setHttpProxy(ZAP_Proxy).setFtpProxy(ZAP_Proxy).setSslProxy(ZAP_Proxy);*/
         ChromeOptions options = new ChromeOptions();
         options.merge(capabilities);
-        //      options.addArguments("--verbose");
+//      options.addArguments("--verbose");
 //      options.addArguments("--window-size=1980,1080");
         options.setAcceptInsecureCerts(true);
         options.addArguments("--incognito");
