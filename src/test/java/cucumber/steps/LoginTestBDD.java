@@ -2,12 +2,12 @@ package cucumber.steps;
 
 import BasePackage.BasePage;
 import BasePackage.BaseTest;
-import pages.healthiScreens.loginPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
+import pages.healthiScreens.loginPage;
 
 
 public class LoginTestBDD extends BaseTest {

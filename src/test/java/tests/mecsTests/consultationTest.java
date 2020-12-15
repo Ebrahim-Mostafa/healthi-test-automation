@@ -1,9 +1,9 @@
 package tests.mecsTests;
 
 import BasePackage.BaseTest;
-import pages.mecScreens.consultationPage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import pages.mecScreens.consultationPage;
 
 public class consultationTest extends BaseTest {
     public static consultationPage consultationPage;
