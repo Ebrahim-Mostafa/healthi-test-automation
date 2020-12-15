@@ -1,9 +1,9 @@
 package tests.healthiTests;
 
 import BasePackage.BaseTest;
-import pages.healthiScreens.logoutPage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import pages.healthiScreens.logoutPage;
 
 public class logoutTest extends BaseTest {
     public static logoutPage logoutPage;
