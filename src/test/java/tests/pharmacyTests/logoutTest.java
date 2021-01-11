@@ -5,8 +5,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.common.LogoutPage;
 
-public class logoutScreenTest extends BaseTest {
-    public static LogoutPage logoutPage;
+public class logoutTest extends BaseTest {
+
+    private static LogoutPage logoutPage;
 
     @BeforeClass
     public void initialization(){

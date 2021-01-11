@@ -13,6 +13,7 @@ import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import static Loggers.PrefsLogger.getChromeLoggingPrefs;
 import static Loggers.PrefsLogger.logPrefs;
 
 public class BrowserOptions {
@@ -33,11 +34,11 @@ public class BrowserOptions {
         capabilities.setCapability(CapabilityType.PROXY, seleniumProxy);
         capabilities.setCapability(CapabilityType.LOGGING_PREFS, logPrefs);
 //      ZAPScanner.zapSetup(); ZAPScanner
-        PrefsLogger.getChromeLoggingPrefs();
+        getChromeLoggingPrefs();
         proxyServer.setHarCaptureTypes(CaptureType.REQUEST_HEADERS, CaptureType.RESPONSE_HEADERS);
 //      proxyServer.setHarCaptureTypes(CaptureType.REQUEST_CONTENT, CaptureType.RESPONSE_CONTENT);
 //      System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
-/*        zapProxy = new Proxy();
+/*      zapProxy = new Proxy();
         zapProxy.setHttpProxy(ZAP_Proxy).setFtpProxy(ZAP_Proxy).setSslProxy(ZAP_Proxy);*/
         ChromeOptions options = new ChromeOptions();
         options.merge(capabilities);

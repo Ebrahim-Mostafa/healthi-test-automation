@@ -12,11 +12,11 @@ public class opticianEHRPage extends BasePage {
     WebElement mecsIcon;
 
     public opticianEHRPage() {
-        BasePage.switchToWindow();
-        BasePage.swtichToFrame(availableClinicalServicesFrame);
+        switchToWindow();
+        swtichToFrame(availableClinicalServicesFrame);
     }
 
     public void clickOnClinicalService() {
-        mecsIcon.click();
+        elementClick(mecsIcon);
     }
 }
