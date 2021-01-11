@@ -34,7 +34,7 @@
   "PatientEHR":
   {
     "NewMedicineService": "xpath;(//p[contains(text(),'New Medicine Service')])[1]",
-    "DeliveredClinicalServices": "xpath;//span[normalize-space()='()']"
+    "DeliveredClinicalServices": "xpath;//*[@id='root']/div/div[4]/main/div/div[3]/div[2]/div/div[1]/span"
   },
   "NewMedicineService":
   {
@@ -54,6 +54,7 @@
     "EngagementSessionOutcom": "xpath;//input[@id='input_50504']",
     "SaveBtn": "xpath;//button[normalize-space()='Save']",
     "InProgressNMS": "xpath;//*[@id='panel2a-header']/div[1]/p[1]",
+    "InProgressClinicalServices": "xpath;//*[@id='root']/div/div[4]/main/div/div[3]/div[1]/div[2]/div[1]/span",
     "InterventionDateField":"xpath;//input[@id='input_50525']",
     "InterventionReviewBtn": "xpath;//button[@id='input_50531']",
     "AsPrescribed": "id;_ckCnf001",

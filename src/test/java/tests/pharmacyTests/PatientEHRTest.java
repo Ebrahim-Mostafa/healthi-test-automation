@@ -7,7 +7,7 @@ import pages.pharmacyScreens.PatientEHRPage;
 
 public class PatientEHRTest extends BaseTest {
 
-    private static PatientEHRPage patientEHRPage;
+    public static PatientEHRPage patientEHRPage;
 
     @BeforeClass
     public void initialization(){

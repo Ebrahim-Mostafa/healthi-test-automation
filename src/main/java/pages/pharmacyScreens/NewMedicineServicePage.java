@@ -85,6 +85,15 @@ public class NewMedicineServicePage extends BasePage {
         JSUtils.clickElementByJS(saveBtn);
     }
 
+    public Integer InProgressClinicalServicesCount(){
+        TimeUtils.shortWait();
+        WebElement InProgressCount = ObjectRepositoryJsonParser.getObjectLocator("$.NewMedicineService.InProgressClinicalServices");
+        String count = InProgressCount.getText().split("[\\(\\)]")[1];
+        int qty = Integer.parseInt(count);
+//      Integer qty = Integer.valueOf(count);
+        return qty;
+    }
+
     public void clickOnNMSFromInProgressClinicalServices(){
         WebElement InProgressNMS = ObjectRepositoryJsonParser.getObjectLocator("$.NewMedicineService.InProgressNMS");
         TimeUtils.explicitWait(5);

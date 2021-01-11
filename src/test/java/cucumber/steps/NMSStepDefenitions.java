@@ -5,6 +5,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.testng.asserts.SoftAssert;
 import pages.common.LoginPage;
 import pages.common.LogoutPage;
 import pages.pharmacyScreens.DashBoardPage;
@@ -15,6 +16,7 @@ import pages.pharmacyScreens.patientRecordsPage;
 public class NMSStepDefenitions extends BaseTest {
 
     private static NewMedicineServicePage newMedicineServicePage;
+    private static SoftAssert softAssert;
 
     @Given("^the NMS service is held in the Available Clinical Services section of the EHR$")
     public void the_nms_service_is_held_in_the_available_clinical_services_section_of_the_ehr() {
@@ -31,6 +33,7 @@ public class NMSStepDefenitions extends BaseTest {
         recordsPage.clickOnSearchBtn();
         recordsPage.clickOnSearchResult();
         PatientEHRPage patientEHRPage = new PatientEHRPage();
+        patientEHRPage.deliveredClinicalServicesCount();
         patientEHRPage.clickOnAvailableClinicalServicesNMS();
     }
 
@@ -54,7 +57,7 @@ public class NMSStepDefenitions extends BaseTest {
     @And("^completes the Intervention screen and saves$")
     public void completes_the_intervention_screen_and_saves() {
         newMedicineServicePage.clickOnNMSFromInProgressClinicalServices();
-        newMedicineServicePage.sendInterventionDate("11/01/2021");
+        newMedicineServicePage.sendInterventionDate("12/01/2021");
         newMedicineServicePage.clickOnInterventionReviewBtn();
         newMedicineServicePage.productReview();
         newMedicineServicePage.clickOnInterventionCompleteRadioBtn();
@@ -63,8 +66,12 @@ public class NMSStepDefenitions extends BaseTest {
 
     @And("^completes the Follow Up screen$")
     public void completes_the_follow_up_screen() {
+        softAssert=new SoftAssert();
+        Integer inProgressClinicalServices = newMedicineServicePage.InProgressClinicalServicesCount()+1;
+        softAssert.assertNotEquals(newMedicineServicePage.InProgressClinicalServicesCount(),inProgressClinicalServices);
+        softAssert.assertEquals(inProgressClinicalServices,"38");
         newMedicineServicePage.clickOnNMSFromInProgressClinicalServices();
-        newMedicineServicePage.sendFollowUpDate("11/01/2021");
+        newMedicineServicePage.sendFollowUpDate("12/01/2021");
         newMedicineServicePage.clickOnFollowUpReviewBtn();
         newMedicineServicePage.productReview();
         newMedicineServicePage.clickOnFollowupCompleteRadioBtn();
@@ -77,7 +84,11 @@ public class NMSStepDefenitions extends BaseTest {
 
     @Then("^the NMS is saved$")
     public void the_nms_is_saved() {
-        System.out.println("NMS is Saved");
+        softAssert=new SoftAssert();
+        PatientEHRPage patientEHRPage = new PatientEHRPage();
+        Integer deliveredClinicalServices = patientEHRPage.deliveredClinicalServicesCount()+1;
+        softAssert.assertNotEquals(patientEHRPage.deliveredClinicalServicesCount(),deliveredClinicalServices);
+        softAssert.assertEquals(deliveredClinicalServices,"22");
     }
 
     @And("^appears in the Completed Clinical Service section of the EHR$")

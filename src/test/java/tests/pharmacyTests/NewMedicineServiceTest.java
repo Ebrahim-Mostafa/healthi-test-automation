@@ -3,14 +3,19 @@ package tests.pharmacyTests;
 import BasePackage.BaseTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import pages.pharmacyScreens.NewMedicineServicePage;
+
+import static tests.pharmacyTests.PatientEHRTest.patientEHRPage;
 
 public class NewMedicineServiceTest extends BaseTest {
 
     private static NewMedicineServicePage newMedicineServicePage;
+    private static SoftAssert softAssert;
 
     @BeforeClass
     public void initialization(){
+        softAssert=new SoftAssert();
         newMedicineServicePage=new NewMedicineServicePage();
     }
 
@@ -25,17 +30,23 @@ public class NewMedicineServiceTest extends BaseTest {
         newMedicineServicePage.clickOnHealthyLivingAdviceCheckBox();
         newMedicineServicePage.ClickOnEngagementSessionCompletedCheckBox();
         newMedicineServicePage.clickOnSaveBtn();
+        Integer inProgressClinicalServices = newMedicineServicePage.InProgressClinicalServicesCount()+1;
+        softAssert.assertNotEquals(newMedicineServicePage.InProgressClinicalServicesCount(),inProgressClinicalServices);
+        softAssert.assertEquals(inProgressClinicalServices,"37");
         newMedicineServicePage.clickOnNMSFromInProgressClinicalServices();
-        newMedicineServicePage.sendInterventionDate("11/01/2021");
+        newMedicineServicePage.sendInterventionDate("12/01/2021");
         newMedicineServicePage.clickOnInterventionReviewBtn();
         newMedicineServicePage.productReview();
         newMedicineServicePage.clickOnInterventionCompleteRadioBtn();
         newMedicineServicePage.clickOnSaveBtn();
         newMedicineServicePage.clickOnNMSFromInProgressClinicalServices();
-        newMedicineServicePage.sendFollowUpDate("11/01/2021");
+        newMedicineServicePage.sendFollowUpDate("12/01/2021");
         newMedicineServicePage.clickOnFollowUpReviewBtn();
         newMedicineServicePage.productReview();
         newMedicineServicePage.clickOnFollowupCompleteRadioBtn();
         newMedicineServicePage.clickOnServiceCompleteBtn();
+        Integer deliveredClinicalServices = patientEHRPage.deliveredClinicalServicesCount()+1;
+        softAssert.assertNotEquals(patientEHRPage.deliveredClinicalServicesCount(),deliveredClinicalServices);
+        softAssert.assertEquals(deliveredClinicalServices,"19");
     }
 }
