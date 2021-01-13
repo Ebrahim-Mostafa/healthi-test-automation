@@ -57,7 +57,7 @@ public class NMSStepDefenitions extends BaseTest {
     @And("^completes the Intervention screen and saves$")
     public void completes_the_intervention_screen_and_saves() {
         newMedicineServicePage.clickOnNMSFromInProgressClinicalServices();
-        newMedicineServicePage.sendInterventionDate("12/01/2021");
+        newMedicineServicePage.sendInterventionDate("13/01/2021");
         newMedicineServicePage.clickOnInterventionReviewBtn();
         newMedicineServicePage.productReview();
         newMedicineServicePage.clickOnInterventionCompleteRadioBtn();
@@ -69,9 +69,9 @@ public class NMSStepDefenitions extends BaseTest {
         softAssert=new SoftAssert();
         Integer inProgressClinicalServices = newMedicineServicePage.InProgressClinicalServicesCount()+1;
         softAssert.assertNotEquals(newMedicineServicePage.InProgressClinicalServicesCount(),inProgressClinicalServices);
-        softAssert.assertEquals(inProgressClinicalServices,"38");
+        softAssert.assertEquals(inProgressClinicalServices,"36");
         newMedicineServicePage.clickOnNMSFromInProgressClinicalServices();
-        newMedicineServicePage.sendFollowUpDate("12/01/2021");
+        newMedicineServicePage.sendFollowUpDate("13/01/2021");
         newMedicineServicePage.clickOnFollowUpReviewBtn();
         newMedicineServicePage.productReview();
         newMedicineServicePage.clickOnFollowupCompleteRadioBtn();
@@ -88,7 +88,7 @@ public class NMSStepDefenitions extends BaseTest {
         PatientEHRPage patientEHRPage = new PatientEHRPage();
         Integer deliveredClinicalServices = patientEHRPage.deliveredClinicalServicesCount()+1;
         softAssert.assertNotEquals(patientEHRPage.deliveredClinicalServicesCount(),deliveredClinicalServices);
-        softAssert.assertEquals(deliveredClinicalServices,"22");
+        softAssert.assertEquals(deliveredClinicalServices,"29");
     }
 
     @And("^appears in the Completed Clinical Service section of the EHR$")

@@ -32,21 +32,21 @@ public class NewMedicineServiceTest extends BaseTest {
         newMedicineServicePage.clickOnSaveBtn();
         Integer inProgressClinicalServices = newMedicineServicePage.InProgressClinicalServicesCount()+1;
         softAssert.assertNotEquals(newMedicineServicePage.InProgressClinicalServicesCount(),inProgressClinicalServices);
-        softAssert.assertEquals(inProgressClinicalServices,"37");
+        softAssert.assertEquals(inProgressClinicalServices,"36");
         newMedicineServicePage.clickOnNMSFromInProgressClinicalServices();
-        newMedicineServicePage.sendInterventionDate("12/01/2021");
+        newMedicineServicePage.sendInterventionDate("13/01/2021");
         newMedicineServicePage.clickOnInterventionReviewBtn();
         newMedicineServicePage.productReview();
         newMedicineServicePage.clickOnInterventionCompleteRadioBtn();
         newMedicineServicePage.clickOnSaveBtn();
         newMedicineServicePage.clickOnNMSFromInProgressClinicalServices();
-        newMedicineServicePage.sendFollowUpDate("12/01/2021");
+        newMedicineServicePage.sendFollowUpDate("13/01/2021");
         newMedicineServicePage.clickOnFollowUpReviewBtn();
         newMedicineServicePage.productReview();
         newMedicineServicePage.clickOnFollowupCompleteRadioBtn();
         newMedicineServicePage.clickOnServiceCompleteBtn();
         Integer deliveredClinicalServices = patientEHRPage.deliveredClinicalServicesCount()+1;
         softAssert.assertNotEquals(patientEHRPage.deliveredClinicalServicesCount(),deliveredClinicalServices);
-        softAssert.assertEquals(deliveredClinicalServices,"19");
+        softAssert.assertEquals(deliveredClinicalServices,"30");
     }
 }
