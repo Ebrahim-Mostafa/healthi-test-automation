@@ -23,19 +23,19 @@ public class LoginPage extends BasePage {
     WebElement recoverPassId = ObjectRepositoryJsonParser.getObjectLocator("$.Login.RecoverPass");
 
     public void fillUserTextBox(String username) {
-        userName.clear();
-        userName.click();
-//        String username = "sa001";
-        userName.sendKeys(username);
-//        Utils.setTextElementText(userName,username);
+        elementClear(userName);
+        elementClick(userName);
+//      String username = "sa001";
+        elementSendKeys(userName,username);
+//      Utils.setTextElementText(userName,username);
     }
 
     public void fillPasswordTextBox(String password) {
-        Password.clear();
-        Password.clear();
-//        String password="goport!!";
-        Password.sendKeys(password);
-//        BasePage.setTextElementText(Password,password);
+        elementClear(Password);
+        elementClick(Password);
+//      String password="goport!!";
+        elementSendKeys(Password,password);
+//      BasePage.setTextElementText(Password,password);
     }
 
     public void clickOnSignInButton() {
@@ -44,20 +44,20 @@ public class LoginPage extends BasePage {
     }
 
     public void clickOnCantAccessAccount() {
-        recoverPassId.click();
+        elementClick(recoverPassId);
     }
 
 
     public void clickOnStandard()
     {
         WebElement StandardRole = ObjectRepositoryJsonParser.getObjectLocator("$.RolePage.StandardRoleButton");
-        StandardRole.click();
+        elementClick(StandardRole);
     }
 
     public void clickOnRestricte()
     {
         WebElement RestricteRole = ObjectRepositoryJsonParser.getObjectLocator("$.RolePage.RestricteRoleButton");
-        RestricteRole.click();
+        elementClick(RestricteRole);
     }
 
 }

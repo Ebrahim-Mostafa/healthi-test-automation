@@ -46,55 +46,54 @@ public class consultationPage extends BasePage {
     }
 
     public void insertDateOfConsultation() {
-        dateOfConsultation.clear();
-        dateOfConsultation.click();
-        dateOfConsultation.sendKeys("01/12/2020");
+        elementClear(dateOfConsultation);
+        elementClick(dateOfConsultation);
+        elementSendKeys(dateOfConsultation,"01/01/2021");
     }
 
     public void insertTimeOfConsultation() {
-        timeOfConsultation.clear();
-        timeOfConsultation.click();
-        timeOfConsultation.sendKeys("09:00 AM");
+        elementClear(timeOfConsultation);
+        elementClick(timeOfConsultation);
+        elementSendKeys(timeOfConsultation,"09:00 AM");
     }
 
     public void selectConsultationMethod() {
-        consultationMethodDropdownList.click();
-        consultationMethodItem.click();
+        elementClick(consultationMethodDropdownList);
+        elementClick(consultationMethodItem);
     }
 
     public void selectRightEyeOfVisualAcuity() {
-        rightEyeDropdownList.click();
-        rightEye.click();
+        elementClick(rightEyeDropdownList);
+        elementClick(rightEye);
     }
 
     public void selectLeftEyeOfVisualAcuity() {
-        leftEyeDropdownList.click();
-        leftEye.click();
+        elementClick(leftEyeDropdownList);
+        elementClick(leftEye);
     }
 
     public void insertExaminationNotes() {
-        examinationNotes.click();
-        examinationNotes.sendKeys("Happy Automation Testing");
+        elementClick(examinationNotes);
+        elementSendKeys(examinationNotes,"Happy Automation Testing");
     }
 
     public void selectFromDiagnosisSearch() {
-        diagnosisSearchDropdownList.click();
-        diagnosisSearchItem.click();
-        selectDiagnosisRightEyeCheckBox.click();
-        selectDiagnosisLeftEyeCheckBox.click();
-        primaryPresentingConditionRadioBtn.click();
-
+        elementClick(diagnosisSearchDropdownList);
+        elementClick(diagnosisSearchItem);
+        elementClick(selectDiagnosisRightEyeCheckBox);
+        elementClick(selectDiagnosisLeftEyeCheckBox);
+        elementClick(primaryPresentingConditionRadioBtn);
     }
 
     public void clickOnNextManagementPlanBtn() {
-        nextManagementPlanBtn.click();
+        elementClick(nextManagementPlanBtn);
     }
 
     public void clickOnSaveAndExitBtn() {
-        saveAndExitBtn.click();
+        elementClick(saveAndExitBtn);
     }
 
     public void clickOnBackBtn() {
-        backBtn.click();
+        elementClick(backBtn);
     }
 }

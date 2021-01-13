@@ -15,7 +15,7 @@ public class LogoutPage extends BasePage {
     WebElement logOut = ObjectRepositoryJsonParser.getObjectLocator("$.Logout.LogoutButtonPharmacy");
 
     public LogoutPage() {
-        BasePage.switchToWindow();
+        switchToWindow();
     }
 
     public void clickOnProfileInfo() {

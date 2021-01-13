@@ -1,6 +1,5 @@
 package tests.pharmacyTests;
 
-import BasePackage.BasePage;
 import BasePackage.BaseTest;
 import Jira.JiraPolicy;
 import org.testng.Assert;
@@ -8,11 +7,13 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.common.LoginPage;
 
+import static BasePackage.BasePage.getPageCurrentURL;
+
 //import pages.pharmacyScreens.rolePage;
 
-public class loginScreenTest extends BaseTest {
+public class loginTest extends BaseTest {
 
-    public static LoginPage loginPage;
+    private static LoginPage loginPage;
 
     @BeforeClass
     public void initialization() {
@@ -28,11 +29,11 @@ public class loginScreenTest extends BaseTest {
         loginPage.fillPasswordTextBox("goport!!");
         loginPage.clickOnSignInButton();
         String roleURL = "https://healthi-test.cegedim.com/suite-webapp/role/list.html";
-        Assert.assertEquals(BasePage.getPageCurrentURL(), roleURL);
+        Assert.assertEquals(getPageCurrentURL(), roleURL);
         loginPage.clickOnStandard();
         String dashboardURL = "https://healthi-test.cegedim.com/pharmacy/Dashboard";
-        Assert.assertEquals(BasePage.getPageCurrentURL(), dashboardURL);
-//       Assert.fail();
+        Assert.assertEquals(getPageCurrentURL(), dashboardURL);
+//      Assert.fail();
 //      MonteScreenRecorder.stopRecording();
     }
 

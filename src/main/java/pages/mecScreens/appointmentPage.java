@@ -48,65 +48,65 @@ public class appointmentPage extends BasePage {
     WebElement saveAndExit;
 
     public appointmentPage() {
-        BasePage.switchToWindow();
-        BasePage.swtichToFrame(triageComponent);
+        switchToWindow();
+        swtichToFrame(triageComponent);
     }
 
     public void insertDateOfInitialContact() {
-        dateOfInitialContact.clear();
-        dateOfInitialContact.click();
-        dateOfInitialContact.sendKeys("01/12/2020");
+        elementClear(dateOfInitialContact);
+        elementClick(dateOfInitialContact);
+        elementSendKeys(dateOfInitialContact,"01/01/2021");
     }
 
     public void inserTimeOfInitialContact() {
-        timeOfInitialContact.clear();
-        timeOfInitialContact.click();
-        timeOfInitialContact.sendKeys("12:30 AM");
+        elementClear(timeOfInitialContact);
+        elementClick(timeOfInitialContact);
+        elementSendKeys(timeOfInitialContact,"12:30 AM");
     }
 
     public void insertInternalTriageNotes() {
-        internalTriageNotes.clear();
-        internalTriageNotes.click();
-        internalTriageNotes.sendKeys("Test");
+        elementClear(internalTriageNotes);
+        elementClick(internalTriageNotes);
+        elementSendKeys(internalTriageNotes,"Test");
     }
 
     public void selectReferralSource() {
-        referralSourcedDropdownList.click();
-        referralSourceItem.click();
+        elementClick(referralSourcedDropdownList);
+        elementClick(referralSourceItem);
     }
 
     public void selectReferralReason() {
-        referralReasonDrodownList.click();
-        referralReasonItem.click();
+        elementClick(referralReasonDrodownList);
+        elementClick(referralReasonItem);
     }
 
     public void insertWasAppointmentGivenCheckbox() {
-        wasAppointmentGiven.click();
+        elementClick(wasAppointmentGiven);
     }
 
     public void selectappointmenType() {
-        appointmenTypeDropdownList.click();
-        appointmenTypeDropdownItem.click();
+        elementClick(appointmenTypeDropdownList);
+        elementClick(appointmenTypeDropdownItem);
     }
 
     public void insertDateOfAppointment() {
-        dateOfAppointment.clear();
-        dateOfAppointment.click();
-        dateOfAppointment.sendKeys("01/12/2020");
+        elementClear(dateOfAppointment);
+        elementClick(dateOfAppointment);
+        elementSendKeys(dateOfAppointment,"01/01/2021");
     }
 
     public void insertTimeOfAppointment() {
-        timeOfAppointment.clear();
-        timeOfAppointment.click();
-        timeOfAppointment.sendKeys("12:00 PM");
+        elementClear(timeOfAppointment);
+        elementClick(timeOfAppointment);
+        elementSendKeys(timeOfAppointment,"12:00 PM");
     }
 
     public void clickOnSaveAndContinueBtn() {
-        saveAndContinueBtn.click();
+        elementClick(saveAndContinueBtn);
     }
 
     public void clickOnSaveAndExitBtn() {
-        saveAndExit.click();
+        elementClick(saveAndExit);
     }
 
 }
