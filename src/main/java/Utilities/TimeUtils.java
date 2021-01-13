@@ -28,8 +28,8 @@ public class TimeUtils {
         DriverFactory.getDriver().manage().timeouts().setScriptTimeout(timeout, TimeUnit.SECONDS);
     }
 
-    public static void waitElement(WebElement locator, int timeout) {
-        new WebDriverWait( DriverFactory.getDriver(), timeout).ignoring(NoSuchElementException.class).ignoring(StaleElementReferenceException.class).until(ExpectedConditions.visibilityOf(locator));
+    public static void waitElement(WebElement element, int timeout) {
+        new WebDriverWait( DriverFactory.getDriver(), timeout).ignoring(NoSuchElementException.class).ignoring(StaleElementReferenceException.class).until(ExpectedConditions.visibilityOf(element));
 
     }
 
