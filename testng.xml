@@ -16,9 +16,9 @@
 
         <classes>
             <class name="healthiTests.LoginNewScreenTest"/>
-            <class name="healthiTests.GetActionsTableTextTest"/>
+<!--<class name="healthiTests.GetActionsTableTextTest"/>-->
             <!--<class name="healthiTests.loginTestJsonPOC"/>-->
-            <!--<class name="healthiTests.logoutTestJsonPOC"/>-->
+<!--            <class name="healthiTests.logoutTestJsonPOC"/>-->
             <!--<class name="healthiTests.logoutTest"/>-->
             <!--<class name="healthiTests.loginTest"/>
             <class name="healthiTests.patientSearchTest"/>

@@ -5,10 +5,12 @@ import BasePackage.BaseTest;
 import Jira.JiraPolicy;
 import Pages.common.LoginPageJsonPOC;
 import Pages.pharmacyScreens.rolePage;
-
+import Utilities.ExcelUtils;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+//import static Utilities.driver;
+
 
 public class LoginNewScreenTest extends BaseTest {
     public static LoginPageJsonPOC loginPage;
@@ -21,23 +23,28 @@ public class LoginNewScreenTest extends BaseTest {
 
     @JiraPolicy(logTicketReady=false)
     @Test  //(retryAnalyzer = RetryAnalyzer.class)
-    public void signIn() {
+    public void signIn() throws Exception {
 //      BrowserMobProxyLogger.printBrowserMobProxyResults();
 //      MonteScreenRecorder.startRecording("signIn");
-        loginPage.fillUserTextBox("apple01");
-        loginPage.fillPasswordTextBox("goport!!");
+        String Username = Utilities.ExcelUtils.SelectCell("Select * from Sheet1 where TestCaseName='NewScreen'","Username");
+        String Password = ExcelUtils.SelectCell("Select * from Sheet1 where TestCaseName='NewScreen'","Password");
+        String URL1 = Utilities.ExcelUtils.SelectCell("Select * from Sheet1 where TestCaseName='NewScreen'","expectedRoleURL");
+        ExcelUtils.CloseExcelSheet();
+
+        loginPage.fillUserTextBox(Username);
+        loginPage.fillPasswordTextBox(Password);
         loginPage.clickOnSignInButton();
-        String expectedURL = "https://healthi-test.cegedim.com/suite-webapp/role/list.html";
-        Assert.assertEquals(BasePage.getPageCurrentURL(), expectedURL);
+        Assert.assertEquals(BasePage.getPageCurrentURL(), URL1);
 //       Assert.fail();
 //      MonteScreenRecorder.stopRecording();
     }
     @Test (dependsOnMethods = "signIn")
-    public void StandardUser(){
+    public void StandardUser() throws Exception {
         rolePage RolePageObject = new rolePage();
         RolePageObject.clickOnStandard();
-        String expectedURL = "https://healthi-test.cegedim.com/pharmacy/Dashboard";
-        Assert.assertEquals(BasePage.getPageCurrentURL(), expectedURL);
+        String URL2 = Utilities.ExcelUtils.SelectCell("Select * from Sheet1 where TestCaseName='NewScreen'","expectedDashBoardURL");
+        ExcelUtils.CloseExcelSheet();
+        Assert.assertEquals(BasePage.getPageCurrentURL(), URL2);
     }
 }
 
