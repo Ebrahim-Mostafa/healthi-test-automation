@@ -26,12 +26,13 @@ public class patientSearchPage extends BasePage {
     WebElement popupYesBtn;
 
     public patientSearchPage(){
-        BasePage.swtichToFrame(searchForAPatientFrame);
+        swtichToFrame(searchForAPatientFrame);
     }
+
     public void fillSurname() {
-        surName.clear();
-        surName.click();
-        surName.sendKeys("Optoeighteen");
+        elementClear(surName);
+        elementClick(surName);
+        elementSendKeys(surName,"Optoeighteen");
     }
 
     public void fillDateOfBirth() {
@@ -46,9 +47,9 @@ public class patientSearchPage extends BasePage {
     }
 
     public void clickOnPopupYesBtn() {
-        if (popup.isDisplayed() == true) {
-            popupYesBtn.click();
-            opticianEHRIcon.click();
+        if (elementIsDisplayed(popup) == true) {
+            elementClick(popupYesBtn);
+            elementClick(opticianEHRIcon);
         } else {
             clickOnopticianEHRIcon();
         }
@@ -56,7 +57,7 @@ public class patientSearchPage extends BasePage {
 
     public void clickOnopticianEHRIcon() {
         try {
-            opticianEHRIcon.click();
+            elementClick(opticianEHRIcon);
             JSUtils.clickElementByJS(opticianEHRIcon);
         } catch (StaleElementReferenceException | ElementClickInterceptedException ex) {
             ex.getStackTrace();

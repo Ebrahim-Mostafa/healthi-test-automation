@@ -8,6 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
+
 public class JSUtils {
 
     public static void clickElementByJS(WebElement element) {
@@ -17,7 +19,7 @@ public class JSUtils {
 
     }
 
-    public static void setAttributesByJS(String value, WebElement element) {
+    public static void setAttributesByJS(WebElement element,String value) {
         JavascriptExecutor js = ((JavascriptExecutor) DriverFactory.getDriver());
         js.executeScript("arguments[0].setAttribute('value','" + value + "');", element);
     }
@@ -32,7 +34,7 @@ public class JSUtils {
         js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
     }
 
-    public static void scrollIntoView(WebElement element, WebDriver driver) {
+    public static void scrollIntoView(WebElement element) {
         JavascriptExecutor js = ((JavascriptExecutor) DriverFactory.getDriver());
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
@@ -43,8 +45,9 @@ public class JSUtils {
 
         //Scroll to a point
         JavascriptExecutor js = (JavascriptExecutor) DriverFactory.getDriver();
-        js.executeScript("window.scrollBy(0,1000)");
+        js.executeScript("window.scrollBy(0,10000)");
     }
+
     public static void drawBorder(WebElement element, WebDriver driver) {
         JavascriptExecutor js = ((JavascriptExecutor) DriverFactory.getDriver());
         js.executeScript("arguments[0].style.border='3px solid red'", element);
