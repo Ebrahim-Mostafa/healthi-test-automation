@@ -14,14 +14,11 @@ import java.io.FileNotFoundException;
 import static BasePackage.BrowserOptions.proxyServer;
 import static Loggers.Log4JLogger.logger;
 
-
-//import Loggers.Log4JLogger;
-
 public class BaseTest extends AbstractTestNGCucumberTests {
     //public static ATUTestRecord recorder;
     public static WebDriver driver;
-    public static EventFiringWebDriver firingWebDriver;
-    public static WebEventListener eventListener;
+    private static EventFiringWebDriver firingWebDriver;
+    private static WebEventListener eventListener;
 
 
     @Parameters(value = {"Browser", "ENV", "URL"})
@@ -44,6 +41,16 @@ public class BaseTest extends AbstractTestNGCucumberTests {
 //      DriverFactory.getDriver().get(url);
         driver.get(url);
 //      BrowserMobProxyLogger.printBrowserMobProxyResults();
+
+/*      --ZAPScanner--
+        ZAPScanner.spiderWithZap();
+        ZAPScanner.setAlertAndAttackStrength();
+        zapScanner.setEnablePassiveScan(true);
+        ZAPScanner.scanWithZap();
+        List<Alert> alerts = filterAlerts(zapScanner.getAlerts());
+        logAlerts(alerts);
+        assertThat(alerts.size(), equalTo(0));
+        */
     }
 
     @AfterMethod
@@ -60,6 +67,7 @@ public class BaseTest extends AbstractTestNGCucumberTests {
     @AfterTest(alwaysRun = true)
     public synchronized void tearDown() throws FileNotFoundException {
         BrowserConsoleLogger.getBrowserConsoleLogs();
+//      ZAPScanner.getReports();
         proxyServer.stop();
         logger.info("****************************** Browser is closed *****************************************");
         DriverFactory.getDriver().quit();

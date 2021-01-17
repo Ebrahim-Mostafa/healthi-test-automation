@@ -1,5 +1,9 @@
 HELP.md
 target/
+.idea/
+allure-report/
+**/logs
+.allure/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
@@ -14,7 +18,8 @@ target/
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea
+*.git
+*.idea
 *.iws
 *.iml
 *.ipr

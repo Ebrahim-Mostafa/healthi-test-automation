@@ -19,28 +19,27 @@ public class loginPage extends BasePage {
     WebElement recoverPassId;
 
     public void fillUserTextBox(String username) {
-        userName.clear();
-        userName.click();
-//        String username = "sa001";
-        userName.sendKeys(username);
-//        Utils.setTextElementText(userName,username);
+        elementClear(userName);
+        elementClick(userName);
+//      String username = "sa001";
+        elementSendKeys(userName,username);
     }
 
     public void fillPasswordTextBox(String password) {
-        Password.clear();
-        Password.clear();
-//        String password="goport!!";
-          Password.sendKeys(password);
-//        BasePage.setTextElementText(Password,password);
+        elementClear(Password);
+        elementClick(Password);
+//      String password="goport!!";
+        elementSendKeys(Password,password);
+//      BasePage.setTextElementText(Password,password);
     }
 
     public void clickOnSignInButton() {
-        signIn.click();
+        elementClick(signIn);
 //      JSUtils.clickElementByJS(signIn);
     }
 
     public void clickOnCantAccessAccount() {
-        recoverPassId.click();
+        elementClick(recoverPassId);
     }
 
 }

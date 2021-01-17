@@ -10,7 +10,7 @@ public class ExcelUtils {
     public static Fillo fillo;
     public static Connection connection;
     public static Recordset recordset;
-    public static String filename = System.getProperty("user.dir") + "/Data/TestData.xlsx";
+    public static String filename = System.getProperty("user.dir") + "/src/test/resources/TestData.xlsx";
 
     private static void openExcelConnection() throws FilloException {
         fillo=new Fillo();

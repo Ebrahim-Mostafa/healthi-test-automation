@@ -4,6 +4,7 @@ import java.security.SecureRandom;
 import java.util.Random;
 
 public class TestDataGeneration {
+
     /*String contains all lower case letters*/
     private static final String CHAR_LOWER = "abcdefghijklmnopqrstuvwxyz";
     /*String contains all Higher case letters*/

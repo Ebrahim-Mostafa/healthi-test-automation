@@ -1,21 +1,21 @@
 package BasePackage;
 
-import com.jayway.jsonpath.JsonPath;
+import Utilities.TimeUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.Iterator;
-import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Set;
 
 import static BasePackage.BaseTest.driver;
 
 
 public class BasePage {
-    static File jsonFile;
+
 
     public BasePage(){
         PageFactory.initElements(driver,this);
@@ -25,6 +25,10 @@ public class BasePage {
     }
     public static void swtichToFrame(WebElement element) {
         DriverFactory.getDriver().switchTo().frame(element);
+    }
+
+    public static void swtichTodefaultContent() {
+        DriverFactory.getDriver().switchTo().defaultContent();
     }
     public static void switchToWindow() {
         String childWindow = DriverFactory.getDriver().getWindowHandle();
@@ -43,8 +47,8 @@ public class BasePage {
 
         // To switch back to parent ID after complete the test
         DriverFactory.getDriver().switchTo().window(parentWindowID);
-
     }
+
     public static String getPageCurrentURL() {
         String currentURL = null;
         try {
@@ -65,98 +69,68 @@ public class BasePage {
         return title;
     }
 
-    public static WebElement getObjectLocator(String jsonpath)
-    {
-
-        String filename = System.getProperty("user.dir") + "/src/test/resources/ObjRepo.json";
-        jsonFile = new File(filename);
-        String locatorProperty = null;
-
+    public static WebElement getElement(By locator) {
+        WebElement element = null;
         try {
-            locatorProperty = JsonPath.read(jsonFile, jsonpath).toString();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            element = driver.findElement(locator);
+        } catch (Exception e) {
+            System.out.println("Some exception occured while creating webelement " + locator);
         }
-        String locatorType = locatorProperty.split(";")[0];
-        String locatorValue = locatorProperty.split(";")[1];
-
-        WebElement Element = null;
-        switch(locatorType)
-        {
-            case "id":
-                Element = driver.findElement(By.id(locatorValue));
-                break;
-            case "name":
-                Element = driver.findElement(By.name(locatorValue));
-                break;
-
-            case "class":
-                Element = driver.findElement(By.className(locatorValue));
-                break;
-            case "css":
-                Element = driver.findElement(By.cssSelector(locatorValue));
-                break;
-            case "link":
-                Element = driver.findElement(By.linkText(locatorValue));
-                break;
-            case "partial":
-                Element = driver.findElement(By.partialLinkText(locatorValue));
-                break;
-            case "tag":
-                Element = driver.findElement(By.tagName(locatorValue));
-                break;
-            case "xpath":
-                Element = driver.findElement(By.xpath(locatorValue));
-                break;
-        }
-        return Element;
+        return element;
     }
-    public static List<WebElement> getObjectLocatorList(String jsonpath)
-    {
 
-        String filename = System.getProperty("user.dir") + "/src/test/resources/ObjRepo.json";
-        jsonFile = new File(filename);
-        String locatorProperty = null;
+    public static boolean elementIsDisplayed(WebElement element) {
+        TimeUtils.waitElement(element,15);
+        return element.isDisplayed();
+    }
 
+    public static boolean elementIsEnabled(WebElement element) {
+        TimeUtils.waitElement(element,15);
+        return element.isEnabled();
+    }
+
+    public static boolean elementIsSelected(WebElement element) {
+        TimeUtils.waitElement(element,15);
+        return element.isSelected();
+    }
+
+    public static String getText(By locator) {
+        TimeUtils.waitElement((WebElement) locator,15);
+        return getElement(locator).getText();
+    }
+
+    public static void elementClick(WebElement element) {
+        element.click();
+    }
+
+    public static void elementClear(WebElement element) {
+        element.clear();
+    }
+
+    public static void elementSendKeys(WebElement element, String value) {
+        element.sendKeys(value);
+    }
+
+    public static void elementDoubleClick(WebElement element) {
         try {
-            locatorProperty = JsonPath.read(jsonFile, jsonpath).toString();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        String locatorType = locatorProperty.split(";")[0];
-        String locatorValue = locatorProperty.split(";")[1];
+            Actions action = new Actions(driver).doubleClick(element);
+            action.build().perform();
 
-        List<WebElement> Elements = null;
-        switch(locatorType)
-        {
-            case "id":
-                Elements = driver.findElements(By.id(locatorValue));
-                break;
-            case "name":
-                Elements = driver.findElements(By.name(locatorValue));
-                break;
-
-            case "class":
-                Elements = driver.findElements(By.className(locatorValue));
-                break;
-            case "css":
-                Elements = driver.findElements(By.cssSelector(locatorValue));
-                break;
-            case "link":
-                Elements = driver.findElements(By.linkText(locatorValue));
-                break;
-            case "partial":
-                Elements = driver.findElements(By.partialLinkText(locatorValue));
-                break;
-            case "tag":
-                Elements = driver.findElements(By.tagName(locatorValue));
-                break;
-            case "xpath":
-                Elements = driver.findElements(By.xpath(locatorValue));
-                break;
+            System.out.println("Double clicked the element");
+        } catch (StaleElementReferenceException e) {
+            System.out.println("Element is not attached to the page document "
+                    + e.getStackTrace());
+        } catch (NoSuchElementException e) {
+            System.out.println("Element " + element + " was not found in DOM "
+                    + e.getStackTrace());
+        } catch (Exception e) {
+            System.out.println("Element " + element + " was not clickable "
+                    + e.getStackTrace());
         }
-        return Elements;
+    }
+
+    public static void elementHoverOver(WebElement element){
+        Actions action = new Actions(driver);
+        action.moveToElement(element).build().perform();
     }
 }

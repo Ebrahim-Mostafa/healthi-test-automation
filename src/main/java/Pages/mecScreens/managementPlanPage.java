@@ -17,22 +17,22 @@ public class managementPlanPage extends BasePage {
     WebElement backBtn;
 
     public void clickOnAdviceGivenToPatientCheckBox() {
-        adviceGivenToPatientCheckBox.click();
+        elementClick(adviceGivenToPatientCheckBox);
     }
 
     public void clickOnReassuredProblemSettled() {
-        reassuredProblemSettled.click();
+        elementClick(reassuredProblemSettled);
     }
 
     public void clickOnNextOutcomeBtn() {
-        nextOutcomeBtn.click();
+        elementClick(nextOutcomeBtn);
     }
 
     public void clickOnSaveAndExitBtn() {
-        saveAndExitBtn.click();
+        elementClick(saveAndExitBtn);
     }
 
     public void clickOnBackBtn() {
-        backBtn.click();
+        elementClick(backBtn);
     }
 }

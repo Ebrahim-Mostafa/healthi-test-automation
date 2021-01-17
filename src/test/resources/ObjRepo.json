@@ -1,21 +1,69 @@
 {
   "Login":
-{ "txt_username":"id;username",
-"txt_password":"id;password",
-"btn_login":"id;entrar",
-"RecoverPass":"id;recoverPassId"
-},"Logout":
-{
-  "ProfileInfoButton": "xpath;//div[@class='profile-image fa']",
-  "LogoutButton": "xpath;//a[@class='logoutLink']"
-},
+  { "txt_username":"id;username",
+    "txt_password":"id;password",
+    "btn_login":"id;entrar",
+    "RecoverPass":"id;recoverPassId"
+  },
+  "Logout":
+  {
+    "ProfileInfoButtonHealthi": "xpath;//div[@class='profile-image fa']",
+    "ProfileInfoButtonPharmacy": "xpath;//div[contains(text(),'Pharmacist')]",
+    "LogoutButtonHealthi": "xpath;//a[@class='logoutLink']",
+    "LogoutButtonPharmacy": "xpath;//li[contains(text(),'Sign Out')]"
+  },
   "RolePage":
   {
-    "StandardRoleButton": "xpath;//table[@class='listado']//tr[@class='odd']//a"
+    "RestrictedRoleButton":"xpath;//a[contains(text(),'Pharmacist UK (Restricted)')]",
+    "StandardRoleButton": "xpath;//a[contains(text(),'Pharmacist UK (Standard)')]"
   },
   "DashBoard":
   {
-    "ActionPendingTable": "xpath;//table[@class='MuiTable-root']//thead//tr"
+    "DashBoardIcon": "xpath;//div[contains(text(),'Close Menu')]",
+    "ActionPendingTable": "xpath;//table[@class='MuiTable-root']//thead//tr",
+    "patientRecords": "xpath;//span[contains(text(),'Patient Records')]"
+  },
+  "PatientRecords":
+  {
+    "Surname": "xpath;//*[@name='surName']",
+    "FirstName": "xpath;//*[@name='firstName']",
+    "DateOfBirth": "xpath;//*[@name='DOB']",
+    "Search_Btn": "xpath;//span[contains(text(),'Search')]",
+    "SearchedPatient": "xpath;//legend[contains(text(),'Smith, Robert')]"
+  },
+  "PatientEHR":
+  {
+    "NewMedicineService": "xpath;(//p[contains(text(),'New Medicine Service')])[1]",
+    "DeliveredClinicalServices": "xpath;//*[@id='root']/div/div[4]/main/div/div[3]/div[2]/div/div[1]/span"
+  },
+  "NewMedicineService":
+  {
+    "AttentionPopupIframe": "xpath;//*[@id='Iframe']",
+    "AttentionPopup_Proceed": "xpath;//span[contains(text(),'Proceed')]",
+    "AttentionPopup_Cancel": "xpath;//span[contains(text(),'Cancel')]",
+    "Engagement_Tab": "xpath;//*[@id='nav1']/table/tbody/tr[2]/td",
+    "Select_Edit_Btn": "xpath;//button[@id='input_50514']",
+    "NMS_Product_Search_Iframe": "xpath;//*[@id='ext-gen153']/iframe",
+    "Product_Search": "xpath;//input[@id='findProductCodeMultiProdField']",
+    "SearchBtn": "xpath;//button[@id='ext-gen158']",
+    "Warfarin1mgcapsules": "xpath;//div[contains(text(),'Warfarin 1mg capsules')]",
+    "AddBtn": "xpath;//button[@id='ext-gen104']",
+    "OKBtn": "xpath;//button[@id='ext-gen185']",
+    "ConsentCheckBox":"xpath;//input[@id='input_50483']",
+    "Dietandnutrition": "xpath;//input[@id='input_50490_0']",
+    "EngagementSessionOutcom": "xpath;//input[@id='input_50504']",
+    "SaveBtn": "xpath;//button[normalize-space()='Save']",
+    "InProgressNMS": "xpath;//*[@id='panel2a-header']/div[1]/p[1]",
+    "InProgressClinicalServices": "xpath;//*[@id='root']/div/div[4]/main/div/div[3]/div[1]/div[2]/div[1]/span",
+    "InterventionDateField":"xpath;//input[@id='input_50525']",
+    "InterventionReviewBtn": "xpath;//button[@id='input_50531']",
+    "AsPrescribed": "id;_ckCnf001",
+    "OkBtn": "xpath;//button[normalize-space()='Ok']",
+    "InterventionComplete": "id;input_50546_0",
+    "FollowUpDate": "xpath;//input[@id='input_50585']",
+    "FollowUpReviewBtn": "xpath;//button[@id='input_50576']",
+    "FollowUpComplete": "id;input_50571_0",
+    "ServiceCompleteBtn": "xpath;//button[normalize-space()='Service Complete']"
   }
 }
 

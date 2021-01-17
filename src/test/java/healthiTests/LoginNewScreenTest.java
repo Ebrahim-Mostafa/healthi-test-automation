@@ -3,8 +3,7 @@ package healthiTests;
 import BasePackage.BasePage;
 import BasePackage.BaseTest;
 import Jira.JiraPolicy;
-import Pages.common.LoginPageJsonPOC;
-import Pages.pharmacyScreens.rolePage;
+import Pages.common.LoginPage;
 import Utilities.ExcelUtils;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -13,12 +12,12 @@ import org.testng.annotations.Test;
 
 
 public class LoginNewScreenTest extends BaseTest {
-    public static LoginPageJsonPOC loginPage;
+    public static LoginPage loginPage;
 
 
     @BeforeClass
     public void initialization() {
-        loginPage = new LoginPageJsonPOC();
+        loginPage = new LoginPage();
     }
 
     @JiraPolicy(logTicketReady=false)
@@ -40,8 +39,7 @@ public class LoginNewScreenTest extends BaseTest {
     }
     @Test (dependsOnMethods = "signIn")
     public void StandardUser() throws Exception {
-        rolePage RolePageObject = new rolePage();
-        RolePageObject.clickOnStandard();
+        loginPage.clickOnStandard();
         String URL2 = Utilities.ExcelUtils.SelectCell("Select * from Sheet1 where TestCaseName='NewScreen'","expectedDashBoardURL");
         ExcelUtils.CloseExcelSheet();
         Assert.assertEquals(BasePage.getPageCurrentURL(), URL2);
