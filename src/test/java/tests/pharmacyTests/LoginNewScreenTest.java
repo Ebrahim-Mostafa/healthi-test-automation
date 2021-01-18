@@ -1,4 +1,4 @@
-package healthiTests;
+package tests.pharmacyTests;
 
 import BasePackage.BasePage;
 import BasePackage.BaseTest;
@@ -37,7 +37,7 @@ public class LoginNewScreenTest extends BaseTest {
 //       Assert.fail();
 //      MonteScreenRecorder.stopRecording();
     }
-    @Test (dependsOnMethods = "signIn")
+    @Test //(dependsOnMethods = "signIn")
     public void StandardUser() throws Exception {
         loginPage.clickOnStandard();
         String URL2 = Utilities.ExcelUtils.SelectCell("Select * from Sheet1 where TestCaseName='NewScreen'","expectedDashBoardURL");

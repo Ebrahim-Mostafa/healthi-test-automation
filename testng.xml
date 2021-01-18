@@ -15,10 +15,8 @@
         <parameter name="URL" value="https://healthi-test.cegedim.com/stk-cas-web/login"/>
 
         <classes>
-<!--            <class name="healthiTests.LoginNewScreenTest"/>-->
+<!--            <class name="tests.pharmacyTests.LoginNewScreenTest"/>-->
 <!--<class name="healthiTests.GetActionsTableTextTest"/>-->
-            <!--<class name="healthiTests.loginTestJsonPOC"/>-->
-<!--            <class name="healthiTests.logoutTestJsonPOC"/>-->
             <!--<class name="healthiTests.logoutTest"/>-->
             <!--<class name="healthiTests.loginTest"/>
             <class name="healthiTests.patientSearchTest"/>
