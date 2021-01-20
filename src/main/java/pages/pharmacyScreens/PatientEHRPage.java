@@ -22,4 +22,14 @@ public class PatientEHRPage extends BasePage {
         JSUtils.scrollPageDown();
         JSUtils.clickElementByJS(NMS);
     }
+
+    public void clickOnAvailableClinicalServicesNHSFluVac(){
+        WebElement NHS = ObjectRepositoryJsonParser.getObjectLocator("$.PatientEHR.NHSFluVaccinationService");
+        elementClick(NHS);
+    }
+
+    public void handleClinicalSafetyWarning(){
+        WebElement warning = ObjectRepositoryJsonParser.getObjectLocator("$.PatientEHR.ClinicalSafetyWarning");
+        elementClick(warning);
+    }
 }
