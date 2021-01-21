@@ -15,7 +15,7 @@ public class NHSFluVaccinationServiceTest extends BaseTest {
     }
 
     @Test(description = "HS-6727-Automate generated dispense event when Complete button clicked multiple times")
-    public void eligibilitySection(){
+    public void generateDispenseEvent(){
         nhsFluVaccinationServicePage.eligiblePatientGroup();
         nhsFluVaccinationServicePage.consentNHSFluVacc();
         nhsFluVaccinationServicePage.vaccineDelivery();
