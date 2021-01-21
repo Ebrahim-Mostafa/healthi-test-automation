@@ -11,6 +11,7 @@ public class DashBoardPage extends BasePage {
 
     List<WebElement> ActionsTableRaw = ObjectRepositoryJsonParser.getObjectLocatorList("$.DashBoard.ActionPendingTable");
     WebElement PatientRecords = ObjectRepositoryJsonParser.getObjectLocator("$.DashBoard.patientRecords");
+    WebElement icon = ObjectRepositoryJsonParser.getObjectLocator("$.DashBoard.XIcon");
 
     public void ReturnActionTableTitle(){
        Iterator<WebElement> i = ActionsTableRaw.iterator();
@@ -22,6 +23,7 @@ public class DashBoardPage extends BasePage {
     }
 
     public void patientRecordsClick(){
+        elementClick(icon);
         elementClick(PatientRecords);
     }
 }
