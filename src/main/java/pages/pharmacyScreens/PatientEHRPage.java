@@ -25,6 +25,7 @@ public class PatientEHRPage extends BasePage {
 
     public void clickOnAvailableClinicalServicesNHSFluVac(){
         WebElement NHS = ObjectRepositoryJsonParser.getObjectLocator("$.PatientEHR.NHSFluVaccinationService");
+        TimeUtils.waitElement(NHS,5);
         elementClick(NHS);
     }
 

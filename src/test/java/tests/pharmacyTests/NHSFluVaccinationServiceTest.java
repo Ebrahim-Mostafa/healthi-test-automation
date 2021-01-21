@@ -18,7 +18,7 @@ public class NHSFluVaccinationServiceTest extends BaseTest {
     public void generateDispenseEvent(){
         nhsFluVaccinationServicePage.eligiblePatientGroup();
         nhsFluVaccinationServicePage.consentNHSFluVacc();
-        nhsFluVaccinationServicePage.vaccineDelivery();
+        nhsFluVaccinationServicePage.vaccinationAdministeredYes();
         nhsFluVaccinationServicePage.completeTheService();
     }
 }
