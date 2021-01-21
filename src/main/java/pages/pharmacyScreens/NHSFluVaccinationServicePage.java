@@ -4,6 +4,9 @@ import BasePackage.BasePage;
 import Utilities.JSUtils;
 import Utilities.ObjectRepositoryJsonParser;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+import static BasePackage.BaseTest.driver;
 
 public class NHSFluVaccinationServicePage extends BasePage {
 
@@ -44,8 +47,10 @@ public class NHSFluVaccinationServicePage extends BasePage {
 
     public void completeTheService(){
         WebElement completeService = ObjectRepositoryJsonParser.getObjectLocator("$.NHSFluVaccinationService.CompleteService");
+        Actions action = new Actions(driver);
         for (int i=1;i<=10;i++) {
-          JSUtils.clickElementByJS(completeService);
+            JSUtils.clickElementByJS(completeService);
+            action.doubleClick(completeService).perform();
         }
     }
 }
