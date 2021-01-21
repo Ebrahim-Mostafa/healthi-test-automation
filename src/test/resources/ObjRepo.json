@@ -21,7 +21,8 @@
   {
     "DashBoardIcon": "xpath;//div[contains(text(),'Close Menu')]",
     "ActionPendingTable": "xpath;//table[@class='MuiTable-root']//thead//tr",
-    "patientRecords": "xpath;//span[contains(text(),'Patient Records')]"
+    "patientRecords": "xpath;//span[contains(text(),'Patient Records')]",
+    "XIcon": "xpath;//*[name()='path' and contains(@d,'M19 6.41L1')]"
   },
   "PatientRecords":
   {
@@ -34,7 +35,9 @@
   "PatientEHR":
   {
     "NewMedicineService": "xpath;(//p[contains(text(),'New Medicine Service')])[1]",
-    "DeliveredClinicalServices": "xpath;//*[@id='root']/div/div[4]/main/div/div[3]/div[2]/div/div[1]/span"
+    "DeliveredClinicalServices": "xpath;//*[@id='root']/div/div[4]/main/div/div[3]/div[2]/div/div[1]/span",
+    "NHSFluVaccinationService": "xpath;(//p[contains(text(),'NHS Flu Vaccination Service')])[1]",
+    "ClinicalSafetyWarning": "xpath;//span[normalize-space()='Yes']"
   },
   "NewMedicineService":
   {
@@ -64,6 +67,32 @@
     "FollowUpReviewBtn": "xpath;//button[@id='input_50576']",
     "FollowUpComplete": "id;input_50571_0",
     "ServiceCompleteBtn": "xpath;//button[normalize-space()='Service Complete']"
+  },
+  "NHSFluVaccinationService":{
+    "EligiblePatientGroup": "xpath;//*[@id='eligiblePatientGroup']",
+    "PregnantWoman": "xpath;//li[normalize-space()='Pregnant woman']",
+    "FeelUnwell": "name;eligibilityResponse1",
+    "AllergicReaction": "name;eligibilityResponse2",
+    "AllergicToAnything": "name;eligibilityResponse3",
+    "SeasonalFlu": "name;eligibilityResponse4",
+    "OtherVac": "name;eligibilityResponse5",
+    "CurrentMed": "name;eligibilityResponse6",
+    "NextBtn": "xpath;//span[contains(text(),'Next')]",
+    "ConsentRecord": "xpath;//span[normalize-space()='Patient has given consent']",
+    "VaccinationAdministeredYes": "xpath;//span[normalize-space()='Yes']",
+    "VaccinationAdministeredNo": "xpath;//span[normalize-space()='No']",
+    "RouteOfAdministration": "xpath;//*[@id='vaccineDelivery.routeOfAdministration']",
+    "Intramuscular": "xpath;//li[normalize-space()='Intramuscular']",
+    "InjectionSite": "xpath;//div[@id='vaccineDelivery.injectionSite']",
+    "LeftArm": "xpath;//li[normalize-space()='Left Arm']",
+    "DateOfAdministration": "xpath;//input[@placeholder='dd/mm/yyyy']",
+    "TimeOfAdministration": "xpath;//input[@placeholder='hh:mm pm']",
+    "VaccineUsed": "id;vaccineSearch",
+    "GSK": "xpath;//input[normalize-space()='GSK - Fluarix TM Tetra (pack size 10)']",
+    "BatchNo": "xpath;//input[@name='vaccineDetails.vaccineBatchNumber']",
+    "ExpiryDate": "xpath;//input[@placeholder='mm/yyyy']",
+    "CompleteBtn": "xpath;//span[normalize-space()='Complete']",
+    "CompleteService": "xpath;/html[1]/body[1]/div[3]/div[3]/div[1]/div[3]/button[2]"
   }
 }
 

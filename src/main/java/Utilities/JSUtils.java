@@ -8,8 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.List;
-
 public class JSUtils {
 
     public static void clickElementByJS(WebElement element) {
@@ -19,14 +17,21 @@ public class JSUtils {
 
     }
 
+    public static void doubleClickElementByJS(WebElement element) {
+
+        JavascriptExecutor js = ((JavascriptExecutor) DriverFactory.getDriver());
+        js.executeScript("arguments[0].dblclick;", element);
+
+    }
+
     public static void setAttributesByJS(WebElement element,String value) {
         JavascriptExecutor js = ((JavascriptExecutor) DriverFactory.getDriver());
         js.executeScript("arguments[0].setAttribute('value','" + value + "');", element);
     }
 
-    public static void clickOn(WebDriver driver, WebElement locator, int timeout) {
-        new WebDriverWait(DriverFactory.getDriver(), timeout).ignoring(StaleElementReferenceException.class).until(ExpectedConditions.elementToBeClickable(locator));
-        locator.click();
+    public static void clickOn(WebDriver driver, WebElement element, int timeout) {
+        new WebDriverWait(DriverFactory.getDriver(), timeout).ignoring(StaleElementReferenceException.class).until(ExpectedConditions.elementToBeClickable(element));
+        element.click();
     }
 
     public static void scrollPageDown() {
