@@ -14,9 +14,15 @@ public class PatientEHRTest extends BaseTest {
         patientEHRPage=new PatientEHRPage();
     }
 
-    @Test
+    @Test(enabled = false,description = "Choose New Medicine Service from Patient EHR screen")
     public void getIntoNMS(){
         patientEHRPage.deliveredClinicalServicesCount();
         patientEHRPage.clickOnAvailableClinicalServicesNMS();
+    }
+
+    @Test(description = "Choose NHS Flu Vaccination Service from Patient EHR screen")
+    public void getIntoNHS(){
+        patientEHRPage.clickOnAvailableClinicalServicesNHSFluVac();
+        patientEHRPage.handleClinicalSafetyWarning();
     }
 }

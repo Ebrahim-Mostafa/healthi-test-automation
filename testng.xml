@@ -19,8 +19,9 @@
             <class name="tests.pharmacyTests.DashBoardTest"/>
             <class name="tests.pharmacyTests.patientRecordsTest"/>
             <class name="tests.pharmacyTests.PatientEHRTest"/>
-            <class name="tests.pharmacyTests.NewMedicineServiceTest"/>
-            <class name="tests.pharmacyTests.logoutTest"/>
+            <class name="tests.pharmacyTests.NHSFluVaccinationServiceTest"/>
+<!--            <class name="tests.pharmacyTests.NewMedicineServiceTest"/>-->
+<!--            <class name="tests.pharmacyTests.logoutTest"/>-->
             <!--            <class name="tests.healthiTests.logoutTest"/>-->
             <!--            <class name="tests.healthiTests.loginTest"/>-->
             <!--            <class name="tests.healthiTests.patientSearchTest"/>-->
