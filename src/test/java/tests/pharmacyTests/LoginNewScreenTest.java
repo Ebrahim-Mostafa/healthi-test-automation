@@ -1,6 +1,5 @@
 package tests.pharmacyTests;
 
-import BasePackage.BasePage;
 import BasePackage.BaseTest;
 import Jira.JiraPolicy;
 import Pages.common.LoginPage;
@@ -8,8 +7,10 @@ import Utilities.ExcelUtils;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-//import static Utilities.driver;
 
+import static BasePackage.BasePage.getPageCurrentURL;
+import static Utilities.ExcelUtils.SelectCell;
+import static Utilities.ExcelUtils.recordset;
 
 public class LoginNewScreenTest extends BaseTest {
     public static LoginPage loginPage;
@@ -25,24 +26,15 @@ public class LoginNewScreenTest extends BaseTest {
     public void signIn() throws Exception {
 //      BrowserMobProxyLogger.printBrowserMobProxyResults();
 //      MonteScreenRecorder.startRecording("signIn");
-        String Username = Utilities.ExcelUtils.SelectCell("Select * from Sheet1 where TestCaseName='NewScreen'","Username");
-        String Password = ExcelUtils.SelectCell("Select * from Sheet1 where TestCaseName='NewScreen'","Password");
-        String URL1 = Utilities.ExcelUtils.SelectCell("Select * from Sheet1 where TestCaseName='NewScreen'","expectedRoleURL");
-        ExcelUtils.CloseExcelSheet();
-
-        loginPage.fillUserTextBox(Username);
-        loginPage.fillPasswordTextBox(Password);
+        loginPage.fillUserTextBox(SelectCell("Select * from Sheet1 where TestCaseName='NewScreen'","Username"));
+        loginPage.fillPasswordTextBox(recordset.getField("Password"));
         loginPage.clickOnSignInButton();
-        Assert.assertEquals(BasePage.getPageCurrentURL(), URL1);
-//       Assert.fail();
-//      MonteScreenRecorder.stopRecording();
-    }
-    @Test //(dependsOnMethods = "signIn")
-    public void StandardUser() throws Exception {
+        Assert.assertEquals(getPageCurrentURL(), SelectCell("Select * from Sheet1 where TestCaseName='NewScreen'","expectedRoleURL"));
         loginPage.clickOnStandard();
-        String URL2 = Utilities.ExcelUtils.SelectCell("Select * from Sheet1 where TestCaseName='NewScreen'","expectedDashBoardURL");
+        Assert.assertEquals(getPageCurrentURL(), SelectCell("Select * from Sheet1 where TestCaseName='NewScreen'","expectedDashBoardURL"));
         ExcelUtils.CloseExcelSheet();
-        Assert.assertEquals(BasePage.getPageCurrentURL(), URL2);
+//      Assert.fail();
+//      MonteScreenRecorder.stopRecording();
     }
 }
 

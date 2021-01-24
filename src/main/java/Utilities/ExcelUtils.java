@@ -5,38 +5,35 @@ import com.codoid.products.fillo.Connection;
 import com.codoid.products.fillo.Fillo;
 import com.codoid.products.fillo.Recordset;
 
+import java.io.File;
+
 public class ExcelUtils {
 
-    public static Fillo fillo;
-    public static Connection connection;
+    private static Fillo fillo;
+    private static Connection connection;
     public static Recordset recordset;
-    public static String filename = System.getProperty("user.dir") + "/src/test/resources/TestData.xlsx";
+    private static String filename = System.getProperty("user.dir")+File.separator+"src"+File.separator+"test"+File.separator+"resources"+File.separator+"TestData.xlsx";
+
 
     private static void openExcelConnection() throws FilloException {
         fillo=new Fillo();
         connection=fillo.getConnection(filename);
     }
 
-
     public static String SelectCell (String Query, String Field) throws FilloException {
-
         openExcelConnection();
-        String CellValue;
         connection = fillo.getConnection(filename);
         recordset = connection.executeQuery(Query);
         recordset.moveNext();
-        CellValue = recordset.getField(Field);
+        String CellValue = recordset.getField(Field);
         /*int count = 0;
         while (recordset.next()) {
             System.out.println(recordset.getField("Username"));
             count++;
         }
-
         System.out.println(count);*/
         System.out.println(CellValue);
-
         return CellValue;
-
     }
 
     public static void selectQuery(String strQuery) throws FilloException {
@@ -44,11 +41,9 @@ public class ExcelUtils {
         openExcelConnection();
         recordset = connection.executeQuery(strQuery);
         recordset.moveNext();
-
     }
 
     public static void insertQuery(String strQuery) throws FilloException {
-
         openExcelConnection();
         connection.executeUpdate(strQuery);
         //recordset=connection.executeQuery(selectStrQuery);
@@ -90,5 +85,4 @@ public class ExcelUtils {
         recordset.close();
         connection.close();
     }
-
 }
