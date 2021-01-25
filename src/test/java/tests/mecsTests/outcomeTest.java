@@ -1,9 +1,9 @@
 package tests.mecsTests;
 
 import BasePackage.BaseTest;
+import Pages.mecScreens.outcomePage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import Pages.mecScreens.outcomePage;
 
 public class outcomeTest extends BaseTest {
     public static outcomePage outcomePage;

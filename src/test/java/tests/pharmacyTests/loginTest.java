@@ -2,10 +2,10 @@ package tests.pharmacyTests;
 
 import BasePackage.BaseTest;
 import Jira.JiraPolicy;
+import Pages.common.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import Pages.common.LoginPage;
 
 import static BasePackage.BasePage.getPageCurrentURL;
 
