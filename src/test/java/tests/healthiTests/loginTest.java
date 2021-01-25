@@ -6,7 +6,7 @@ import Jira.JiraPolicy;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import pages.healthiScreens.loginPage;
+import Pages.healthiScreens.loginPage;
 
 
 public class loginTest extends BaseTest {

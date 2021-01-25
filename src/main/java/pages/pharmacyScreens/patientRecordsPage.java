@@ -1,4 +1,4 @@
-package pages.pharmacyScreens;
+package Pages.pharmacyScreens;
 
 import BasePackage.BasePage;
 import Utilities.ObjectRepositoryJsonParser;

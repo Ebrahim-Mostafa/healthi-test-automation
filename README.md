@@ -43,19 +43,19 @@ Please run these commands on your console inside or outside the IDE considering 
 > mvn install:install-file -Dfile={Path}\libs\harlib-1.1.1.jar -DgroupId=edu.umass.cs.benchlab -DartifactId=harlib -Dversion=1.1.1  -Dpackaging=jar -DgeneratePom=true <br />
 
 ## `OWASP ZAP Docker Container Setup:`
-Insure that you are having Docker installed on your machine , if you haven't try to install it from here [Docker Hub](https://hub.docker.com/editions/community/docker-ce-desktop-windows/).<br />
+ensure that you are having Docker installed on your machine, if you haven't try to install it from here [Docker Hub](https://hub.docker.com/editions/community/docker-ce-desktop-windows/).<br />
 
 
 ## 1.Install or pull docker image -<br />
 > docker pull owasp/zap2docker-stable <br />
 
-## 2.You can start the ZAP in headless mode with following command - <br />
+## 2.You can start the ZAP in headless mode with the following command - <br />
 > docker run -u zap -p 8080:8080 -i owasp/zap2docker-stable zap.sh -daemon -host 0.0.0.0 -port 8080 -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true -config api.disablekey=true <br />
 
 ## 3.Run your Selenium tests independently but within selenium tests configure the proxy to hit port 8080 (or whichever you are using). 
 <br />
 
-## 4.The following command will generate report in the container -
+## 4.The following command will generate the report in the container -
 > docker exec $container_Id zap-cli report -o vulnerability.html -f HTML <br />
 
 ## 5.you can copy this report anywhere. Then stop the container and remove it.
@@ -65,7 +65,7 @@ Insure that you are having Docker installed on your machine , if you haven't try
 
 Open your windows PowerShell:<br />
 
-One of the easiest way to start PowerShell in Windows is using Run window. Press Win + R keys on your keyboard, then type PowerShell and press Enter or click OK.<br />
+One of the easiest ways to start PowerShell in Windows is using the Run window. Press Win + R keys on your keyboard, then type PowerShell and press Enter or click OK.<br />
 
 Run these Commands:<br />
 
