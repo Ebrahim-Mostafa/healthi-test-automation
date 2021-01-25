@@ -7,7 +7,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
-import pages.healthiScreens.loginPage;
+import Pages.healthiScreens.loginPage;
 
 
 public class LoginTestBDD extends BaseTest {

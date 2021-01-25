@@ -1,4 +1,4 @@
-package pages.common;
+package Pages.common;
 
 import BasePackage.BasePage;
 import Utilities.ObjectRepositoryJsonParser;

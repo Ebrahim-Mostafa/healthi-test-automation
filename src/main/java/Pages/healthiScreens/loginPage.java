@@ -1,4 +1,4 @@
-package pages.healthiScreens;
+package Pages.healthiScreens;
 
 import BasePackage.BasePage;
 import org.openqa.selenium.WebElement;

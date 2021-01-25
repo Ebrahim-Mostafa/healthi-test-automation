@@ -3,7 +3,7 @@ package tests.pharmacyTests;
 import BasePackage.BaseTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import pages.common.LogoutPage;
+import Pages.common.LogoutPage;
 
 public class logoutTest extends BaseTest {
 

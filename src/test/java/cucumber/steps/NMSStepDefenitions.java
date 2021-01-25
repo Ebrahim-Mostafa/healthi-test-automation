@@ -6,12 +6,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.asserts.SoftAssert;
-import pages.common.LoginPage;
-import pages.common.LogoutPage;
-import pages.pharmacyScreens.DashBoardPage;
-import pages.pharmacyScreens.NewMedicineServicePage;
-import pages.pharmacyScreens.PatientEHRPage;
-import pages.pharmacyScreens.patientRecordsPage;
+import Pages.common.LoginPage;
+import Pages.common.LogoutPage;
+import Pages.pharmacyScreens.DashBoardPage;
+import Pages.pharmacyScreens.NewMedicineServicePage;
+import Pages.pharmacyScreens.PatientEHRPage;
+import Pages.pharmacyScreens.patientRecordsPage;
 
 public class NMSStepDefenitions extends BaseTest {
 
