@@ -3,7 +3,7 @@ package tests.pharmacyTests;
 import BasePackage.BaseTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import pages.pharmacyScreens.PatientEHRPage;
+import Pages.pharmacyScreens.PatientEHRPage;
 
 public class PatientEHRTest extends BaseTest {
 

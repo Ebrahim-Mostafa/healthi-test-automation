@@ -4,7 +4,7 @@ import BasePackage.BaseTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import pages.pharmacyScreens.NewMedicineServicePage;
+import Pages.pharmacyScreens.NewMedicineServicePage;
 
 import static tests.pharmacyTests.PatientEHRTest.patientEHRPage;
 

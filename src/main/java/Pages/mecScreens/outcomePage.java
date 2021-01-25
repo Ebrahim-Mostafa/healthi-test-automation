@@ -1,4 +1,4 @@
-package pages.mecScreens;
+package Pages.mecScreens;
 
 import BasePackage.BasePage;
 import Utilities.JSUtils;

@@ -5,7 +5,7 @@ import Jira.JiraPolicy;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import pages.common.LoginPage;
+import Pages.common.LoginPage;
 
 import static BasePackage.BasePage.getPageCurrentURL;
 
