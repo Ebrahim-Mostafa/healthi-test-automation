@@ -1,9 +1,9 @@
 package tests.healthiTests;
 
 import BasePackage.BaseTest;
+import Pages.healthiScreens.patientSearchPage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import Pages.healthiScreens.patientSearchPage;
 
 public class patientSearchTest extends BaseTest {
     public static patientSearchPage patientSearchPage;

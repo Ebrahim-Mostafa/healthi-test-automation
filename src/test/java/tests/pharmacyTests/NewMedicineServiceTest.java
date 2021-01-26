@@ -1,10 +1,10 @@
 package tests.pharmacyTests;
 
 import BasePackage.BaseTest;
+import Pages.pharmacyScreens.NewMedicineServicePage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import Pages.pharmacyScreens.NewMedicineServicePage;
 
 import static tests.pharmacyTests.PatientEHRTest.patientEHRPage;
 
