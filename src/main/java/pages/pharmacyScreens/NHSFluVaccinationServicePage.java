@@ -3,11 +3,13 @@ package Pages.pharmacyScreens;
 import BasePackage.BasePage;
 import Utilities.JSUtils;
 import Utilities.ObjectRepositoryJsonParser;
+import com.codoid.products.exception.FilloException;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 import static BasePackage.BaseTest.driver;
+import static Utilities.ExcelUtils.SelectCell;
 
 public class NHSFluVaccinationServicePage extends BasePage {
 
@@ -39,7 +41,7 @@ public class NHSFluVaccinationServicePage extends BasePage {
         elementClick(nextBtn);
     }
 
-    public void vaccinationAdministeredYes(){
+    public void vaccinationAdministeredYes() throws FilloException {
         WebElement vaccinationAdministeredYes = ObjectRepositoryJsonParser.getObjectLocator("$.NHSFluVaccinationService.VaccinationAdministeredYes");
         elementClick(vaccinationAdministeredYes);
         WebElement routeOfAdministrationDropdown = ObjectRepositoryJsonParser.getObjectLocator("$.NHSFluVaccinationService.RouteOfAdministration");
@@ -51,17 +53,17 @@ public class NHSFluVaccinationServicePage extends BasePage {
         WebElement LeftArm = ObjectRepositoryJsonParser.getObjectLocator("$.NHSFluVaccinationService.LeftArm");
         elementClick(LeftArm);
         WebElement dateOfAdministration = ObjectRepositoryJsonParser.getObjectLocator("$.NHSFluVaccinationService.DateOfAdministration");
-        elementSendKeys(dateOfAdministration,"21/01/2021");
+        elementSendKeys(dateOfAdministration,SelectCell("Select * from NHSFLuVaccService where TestCaseName='NHSFluVac1'","DateOfAdmin"));
         WebElement timeOfAdministration = ObjectRepositoryJsonParser.getObjectLocator("$.NHSFluVaccinationService.TimeOfAdministration");
-        elementSendKeys(timeOfAdministration,"01:30 PM");
+        elementSendKeys(timeOfAdministration,SelectCell("Select * from NHSFLuVaccService where TestCaseName='NHSFluVac1'","TimeOfAdmin"));
         WebElement vaccineSearch = ObjectRepositoryJsonParser.getObjectLocator("$.NHSFluVaccinationService.VaccineUsed");
-        elementSendKeys(vaccineSearch,"GSK - Fluarix TM Tetra (pack size 10)");
+        elementSendKeys(vaccineSearch,SelectCell("Select * from NHSFLuVaccService where TestCaseName='NHSFluVac1'","VaccineSearch"));
         vaccineSearch.sendKeys(Keys.ARROW_DOWN);
         vaccineSearch.sendKeys(Keys.RETURN);
         WebElement batchNo = ObjectRepositoryJsonParser.getObjectLocator("$.NHSFluVaccinationService.BatchNo");
-        elementSendKeys(batchNo,"12345");
+        elementSendKeys(batchNo,SelectCell("Select * from NHSFLuVaccService where TestCaseName='NHSFluVac1'","BatchNum"));
         WebElement expiryDate = ObjectRepositoryJsonParser.getObjectLocator("$.NHSFluVaccinationService.ExpiryDate");
-        elementSendKeys(expiryDate,"01/2021");
+        elementSendKeys(expiryDate,SelectCell("Select * from NHSFLuVaccService where TestCaseName='NHSFluVac1'","ExpiryDate"));
         WebElement completeBtn = ObjectRepositoryJsonParser.getObjectLocator("$.NHSFluVaccinationService.CompleteBtn");
         elementClick(completeBtn);
     }

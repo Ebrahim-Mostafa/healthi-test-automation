@@ -2,6 +2,7 @@ package tests.pharmacyTests;
 
 import BasePackage.BaseTest;
 import Pages.pharmacyScreens.NHSFluVaccinationServicePage;
+import com.codoid.products.exception.FilloException;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -15,7 +16,7 @@ public class NHSFluVaccinationServiceTest extends BaseTest {
     }
 
     @Test(description = "HS-6727-Automate generated dispense event when Complete button clicked multiple times")
-    public void generateDispenseEvent(){
+    public void generateDispenseEvent() throws FilloException {
         nhsFluVaccinationServicePage.eligiblePatientGroup();
         nhsFluVaccinationServicePage.consentNHSFluVacc();
         nhsFluVaccinationServicePage.vaccinationAdministeredYes();
