@@ -3,7 +3,7 @@ package tests.pharmacyTests;
 import BasePackage.BaseTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import pages.pharmacyScreens.NHSFluVaccinationServicePage;
+import Pages.pharmacyScreens.NHSFluVaccinationServicePage;
 
 public class NHSFluVaccinationServiceTest extends BaseTest {
 
