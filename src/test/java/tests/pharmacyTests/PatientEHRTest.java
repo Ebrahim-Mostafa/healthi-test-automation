@@ -1,9 +1,9 @@
 package tests.pharmacyTests;
 
 import BasePackage.BaseTest;
+import Pages.pharmacyScreens.PatientEHRPage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import Pages.pharmacyScreens.PatientEHRPage;
 
 public class PatientEHRTest extends BaseTest {
 

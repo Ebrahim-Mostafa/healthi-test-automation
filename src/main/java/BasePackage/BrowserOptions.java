@@ -1,7 +1,6 @@
 package BasePackage;
 
 import Loggers.BrowserMobProxyLogger;
-import Loggers.PrefsLogger;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import net.lightbody.bmp.BrowserMobProxy;
 import net.lightbody.bmp.proxy.CaptureType;
