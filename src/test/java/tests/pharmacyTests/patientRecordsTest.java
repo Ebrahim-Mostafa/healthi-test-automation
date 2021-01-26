@@ -1,9 +1,12 @@
 package tests.pharmacyTests;
 
 import BasePackage.BaseTest;
+import com.codoid.products.exception.FilloException;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import Pages.pharmacyScreens.patientRecordsPage;
+
+import static Utilities.ExcelUtils.SelectCell;
 
 public class patientRecordsTest extends BaseTest{
 
@@ -15,9 +18,9 @@ public class patientRecordsTest extends BaseTest{
     }
 
     @Test
-    public void searchForPatientRecords(){
-        recordsPage.fillSurname("Smith");
-        recordsPage.fillFirstName("Robert");
+    public void searchForPatientRecords() throws FilloException {
+        recordsPage.fillSurname(SelectCell("Select * from PatientRecords where TestCaseName='PatientSearch1'","Surname"));
+        recordsPage.fillFirstName(SelectCell("Select * from PatientRecords where TestCaseName='PatientSearch1'","FirstName"));
         recordsPage.clickOnSearchBtn();
         recordsPage.clickOnSearchResult();
     }
