@@ -3,10 +3,10 @@ package tests.healthiTests;
 import BasePackage.BasePage;
 import BasePackage.BaseTest;
 import Jira.JiraPolicy;
+import Pages.healthiScreens.loginPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import Pages.healthiScreens.loginPage;
 
 
 public class loginTest extends BaseTest {

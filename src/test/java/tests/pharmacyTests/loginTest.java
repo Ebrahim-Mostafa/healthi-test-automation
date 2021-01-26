@@ -2,11 +2,14 @@ package tests.pharmacyTests;
 
 import BasePackage.BaseTest;
 import Jira.JiraPolicy;
+<<<<<<< HEAD
 import com.codoid.products.exception.FilloException;
+=======
+import Pages.common.LoginPage;
+>>>>>>> f6b53434879a3a034fe58a3cd8442b25e0b9a7d7
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import Pages.common.LoginPage;
 
 import static BasePackage.BasePage.getPageCurrentURL;
 import static Utilities.ExcelUtils.SelectCell;

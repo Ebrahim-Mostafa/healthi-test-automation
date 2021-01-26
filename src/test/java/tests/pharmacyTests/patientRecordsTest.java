@@ -1,10 +1,13 @@
 package tests.pharmacyTests;
 
 import BasePackage.BaseTest;
+<<<<<<< HEAD
 import com.codoid.products.exception.FilloException;
+=======
+import Pages.pharmacyScreens.patientRecordsPage;
+>>>>>>> f6b53434879a3a034fe58a3cd8442b25e0b9a7d7
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import Pages.pharmacyScreens.patientRecordsPage;
 
 import static Utilities.ExcelUtils.SelectCell;
 
