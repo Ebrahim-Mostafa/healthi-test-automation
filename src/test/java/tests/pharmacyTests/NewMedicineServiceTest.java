@@ -2,10 +2,13 @@ package tests.pharmacyTests;
 
 import BasePackage.BaseTest;
 import Pages.pharmacyScreens.NewMedicineServicePage;
+import Utilities.ExcelUtils;
+import com.codoid.products.exception.FilloException;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import static Utilities.ExcelUtils.SelectCell;
 import static tests.pharmacyTests.PatientEHRTest.patientEHRPage;
 
 public class NewMedicineServiceTest extends BaseTest {
@@ -20,33 +23,34 @@ public class NewMedicineServiceTest extends BaseTest {
     }
 
     @Test
-    public void NMSSunnyDayScenario(){
+    public void NMSSunnyDayScenario() throws FilloException {
         newMedicineServicePage.ProceedNMSPopup();
 //      newMedicineServicePage.CancelNMSPopup();
         newMedicineServicePage.SelectEngagementTab();
         newMedicineServicePage.clickOnSelectEditBtn();
-        newMedicineServicePage.productSearch("Warfarin");
+        newMedicineServicePage.productSearch(SelectCell("Select * from NewMedicineService where TestCaseName='NewMedicine1'","ProductSearch"));
         newMedicineServicePage.clickOnConsentCheckBox();
         newMedicineServicePage.clickOnHealthyLivingAdviceCheckBox();
         newMedicineServicePage.ClickOnEngagementSessionCompletedCheckBox();
         newMedicineServicePage.clickOnSaveBtn();
         Integer inProgressClinicalServices = newMedicineServicePage.InProgressClinicalServicesCount()+1;
         softAssert.assertNotEquals(newMedicineServicePage.InProgressClinicalServicesCount(),inProgressClinicalServices);
-        softAssert.assertEquals(inProgressClinicalServices,"36");
+        softAssert.assertEquals(inProgressClinicalServices,SelectCell("Select * from NewMedicineService where TestCaseName='NewMedicine1'","inProgressClinicalServicesExpected"));
         newMedicineServicePage.clickOnNMSFromInProgressClinicalServices();
-        newMedicineServicePage.sendInterventionDate("13/01/2021");
+        newMedicineServicePage.sendInterventionDate(SelectCell("Select * from NewMedicineService where TestCaseName='NewMedicine1'","InterventionDate"));
         newMedicineServicePage.clickOnInterventionReviewBtn();
         newMedicineServicePage.productReview();
         newMedicineServicePage.clickOnInterventionCompleteRadioBtn();
         newMedicineServicePage.clickOnSaveBtn();
         newMedicineServicePage.clickOnNMSFromInProgressClinicalServices();
-        newMedicineServicePage.sendFollowUpDate("13/01/2021");
+        newMedicineServicePage.sendFollowUpDate(SelectCell("Select * from NewMedicineService where TestCaseName='NewMedicine1'","FollowUpDate"));
         newMedicineServicePage.clickOnFollowUpReviewBtn();
         newMedicineServicePage.productReview();
         newMedicineServicePage.clickOnFollowupCompleteRadioBtn();
         newMedicineServicePage.clickOnServiceCompleteBtn();
         Integer deliveredClinicalServices = patientEHRPage.deliveredClinicalServicesCount()+1;
         softAssert.assertNotEquals(patientEHRPage.deliveredClinicalServicesCount(),deliveredClinicalServices);
-        softAssert.assertEquals(deliveredClinicalServices,"30");
+        softAssert.assertEquals(deliveredClinicalServices,SelectCell("Select * from NewMedicineService where TestCaseName='NewMedicine1'","deliveredClinicalServicesExpected"));
+        ExcelUtils.CloseExcelSheet();
     }
 }
