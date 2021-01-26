@@ -1,17 +1,17 @@
 package cucumber.steps;
 
 import BasePackage.BaseTest;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import org.testng.asserts.SoftAssert;
 import Pages.common.LoginPage;
 import Pages.common.LogoutPage;
 import Pages.pharmacyScreens.DashBoardPage;
 import Pages.pharmacyScreens.NewMedicineServicePage;
 import Pages.pharmacyScreens.PatientEHRPage;
 import Pages.pharmacyScreens.patientRecordsPage;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.testng.asserts.SoftAssert;
 
 public class NMSStepDefenitions extends BaseTest {
 

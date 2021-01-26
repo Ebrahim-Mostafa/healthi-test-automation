@@ -1,9 +1,9 @@
 package tests.mecsTests;
 
 import BasePackage.BaseTest;
+import Pages.mecScreens.managementPlanPage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import Pages.mecScreens.managementPlanPage;
 
 public class managementPlanTest extends BaseTest {
     public static managementPlanPage managementPlanPage;
