@@ -2,8 +2,8 @@ package tests.pharmacyTests;
 
 import BasePackage.BaseTest;
 import Jira.JiraPolicy;
-import com.codoid.products.exception.FilloException;
 import Pages.common.LoginPage;
+import com.codoid.products.exception.FilloException;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;

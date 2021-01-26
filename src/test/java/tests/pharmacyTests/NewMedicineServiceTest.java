@@ -1,9 +1,9 @@
 package tests.pharmacyTests;
 
 import BasePackage.BaseTest;
+import Pages.pharmacyScreens.NewMedicineServicePage;
 import Utilities.ExcelUtils;
 import com.codoid.products.exception.FilloException;
-import Pages.pharmacyScreens.NewMedicineServicePage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;

@@ -1,8 +1,8 @@
 package tests.pharmacyTests;
 
 import BasePackage.BaseTest;
-import com.codoid.products.exception.FilloException;
 import Pages.pharmacyScreens.patientRecordsPage;
+import com.codoid.products.exception.FilloException;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
