@@ -1,9 +1,9 @@
 package tests.healthiTests;
 
 import BasePackage.BaseTest;
+import Pages.healthiScreens.opticianEHRPage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import Pages.healthiScreens.opticianEHRPage;
 
 public class opticianEHRTest extends BaseTest {
     public static opticianEHRPage opticianEHRPage;

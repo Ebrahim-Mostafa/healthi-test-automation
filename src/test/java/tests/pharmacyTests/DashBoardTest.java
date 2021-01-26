@@ -2,9 +2,9 @@ package tests.pharmacyTests;
 
 import BasePackage.BaseTest;
 import Jira.JiraPolicy;
+import Pages.pharmacyScreens.DashBoardPage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import Pages.pharmacyScreens.DashBoardPage;
 
 public class DashBoardTest extends BaseTest {
 
