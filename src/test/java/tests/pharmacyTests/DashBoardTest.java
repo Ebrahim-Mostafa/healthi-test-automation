@@ -1,7 +1,7 @@
 package tests.pharmacyTests;
 
 import BasePackage.BaseTest;
-import Jira.JiraPolicy;
+import Jira.JiraTestCase;
 import Pages.pharmacyScreens.DashBoardPage;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -15,7 +15,7 @@ public class DashBoardTest extends BaseTest {
         DashBoard = new DashBoardPage();
     }
 
-    @JiraPolicy(logTicketReady=false)
+    @JiraTestCase(logTicketReady=false)
     @Test  //(retryAnalyzer = RetryAnalyzer.class)
     public void PrintFirstRow() {
         DashBoard.ReturnActionTableTitle();

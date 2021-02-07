@@ -2,7 +2,7 @@ package tests.healthiTests;
 
 import BasePackage.BasePage;
 import BasePackage.BaseTest;
-import Jira.JiraPolicy;
+import Jira.JiraTestCase;
 import Pages.healthiScreens.loginPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -17,7 +17,7 @@ public class loginTest extends BaseTest {
         loginPage = new loginPage();
     }
 
-    @JiraPolicy(logTicketReady=false)
+    @JiraTestCase(logTicketReady=false)
     @Test  //(retryAnalyzer = RetryAnalyzer.class)
     public void signIn() {
 //      BrowserMobProxyLogger.printBrowserMobProxyResults();

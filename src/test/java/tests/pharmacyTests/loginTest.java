@@ -1,7 +1,7 @@
 package tests.pharmacyTests;
 
 import BasePackage.BaseTest;
-import Jira.JiraPolicy;
+import Jira.JiraTestCase;
 import Pages.common.LoginPage;
 import com.codoid.products.exception.FilloException;
 import org.testng.Assert;
@@ -22,7 +22,7 @@ public class loginTest extends BaseTest {
         loginPage = new LoginPage();
     }
 
-    @JiraPolicy(logTicketReady=false)
+    @JiraTestCase(logTicketReady=false)
     @Test  //(retryAnalyzer = RetryAnalyzer.class)
     public void signIn() throws FilloException {
 //      BrowserMobProxyLogger.printBrowserMobProxyResults();
