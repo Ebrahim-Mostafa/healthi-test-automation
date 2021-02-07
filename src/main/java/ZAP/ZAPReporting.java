@@ -13,13 +13,14 @@ import java.util.Date;
 
 import static BasePackage.BaseTest.driver;
 import static Loggers.Log4JLogger.logger;
+import static Utilities.LoadProperties.zapProperty;
 import static Utilities.Utils.*;
 
 public class ZAPReporting {
 
-    public  final static String ZAP_HOST = "localhost";
+    public  final static String ZAP_HOST = zapProperty.getProperty("ZAPProxyHost");
     public  final static int ZAP_PORT = 8080;
-    private final static String BASE_URL = "https://healthi-test.cegedim.com/login";
+    private final static String BASE_URL = zapProperty.getProperty("BaseURL");
     // create an object of org.zaproxy.clientapi.core.ClientApi using ZAP host and port.
     private static ClientApi api = new ClientApi(ZAP_HOST, ZAP_PORT);
 
