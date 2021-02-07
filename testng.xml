@@ -7,6 +7,7 @@
         <listener class-name="Listeners.TestAllureListener"/>
         <listener class-name="Listeners.TestJiraListener"/>
         <listener class-name="Listeners.TestScreenCaptureListener"/>
+<!--        <listener class-name="Listeners.QmetryExecutionListener"/>-->
     </listeners>
 
     <test name="Test On Chrome">
@@ -21,7 +22,7 @@
             <class name="tests.pharmacyTests.PatientEHRTest"/>
             <class name="tests.pharmacyTests.NHSFluVaccinationServiceTest"/>
             <!--            <class name="tests.pharmacyTests.NewMedicineServiceTest"/>-->
-            <!--            <class name="tests.pharmacyTests.logoutTest"/>-->
+<!--                        <class name="tests.pharmacyTests.logoutTest"/>-->
             <!--            <class name="tests.healthiTests.logoutTest"/>-->
             <!--            <class name="tests.healthiTests.loginTest"/>-->
             <!--            <class name="tests.healthiTests.patientSearchTest"/>-->
@@ -36,7 +37,6 @@
             <!--            <class name="tests.mecsTests.managementPlanTest"/>-->
             <!--            <class name="tests.mecsTests.outcomeTest"/>-->
             <!--            <class name="tests.healthiTests.logoutTest"/>-->
-
         </classes>
     </test> <!-- configuration annotation Test -->
 

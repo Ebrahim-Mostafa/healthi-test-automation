@@ -1,7 +1,7 @@
 package Listeners;
 
 import Jira.JiraConstants;
-import Jira.JiraPolicy;
+import Jira.JiraTestCase;
 import com.sun.jersey.core.util.Base64;
 import org.apache.commons.lang.exception.ExceptionUtils;
 import org.apache.http.HttpHeaders;
@@ -11,6 +11,7 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
+import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
@@ -22,9 +23,19 @@ import static Jira.JiraConstants.*;
 public class TestJiraListener implements ITestListener {
 
     @Override
+    public void onTestStart(ITestResult iTestResult) {
+
+    }
+
+    @Override
+    public void onTestSuccess(ITestResult iTestResult) {
+
+    }
+
+    @Override
     public void onTestFailure(ITestResult result) {
 
-        JiraPolicy jiraPolicy = result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(JiraPolicy.class);
+        JiraTestCase jiraPolicy = result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(JiraTestCase.class);
         boolean isTicketReady = jiraPolicy.logTicketReady();
         if (isTicketReady) {
             try {
@@ -54,5 +65,25 @@ public class TestJiraListener implements ITestListener {
                 e.printStackTrace();
             }
         }
+    }
+
+    @Override
+    public void onTestSkipped(ITestResult iTestResult) {
+
+    }
+
+    @Override
+    public void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult) {
+
+    }
+
+    @Override
+    public void onStart(ITestContext iTestContext) {
+
+    }
+
+    @Override
+    public void onFinish(ITestContext iTestContext) {
+
     }
 }

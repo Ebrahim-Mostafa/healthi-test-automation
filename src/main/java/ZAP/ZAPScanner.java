@@ -17,17 +17,18 @@ import java.util.List;
 
 import static BasePackage.BaseTest.driver;
 import static Loggers.Log4JLogger.logger;
+import static Utilities.LoadProperties.zapProperty;
 import static Utilities.Utils.*;
 
 public class ZAPScanner {
 
-    private final static String BASE_URL = "https://healthi-test.cegedim.com/login";
-    private final static String LOGOUT_URL = "https://healthi-test.cegedim.com/stk-cas-web/logout";
-    public  final static String ZAP_PROXYHOST = "localhost";
+    private final static String BASE_URL = zapProperty.getProperty("BaseURL");
+    private final static String LOGOUT_URL = zapProperty.getProperty("LogoutURL");
+    public  final static String ZAP_PROXYHOST = zapProperty.getProperty("ZAPProxyHost");
     public  final static int ZAP_PROXYPORT = 8080;
-    private final static String ZAP_APIKEY = null;
-    private final static String MEDIUM = "MEDIUM";
-    private final static String HIGH = "HIGH";
+    private final static String ZAP_APIKEY = zapProperty.getProperty("ZAPAPIKey");
+    private final static String MEDIUM = zapProperty.getProperty("Medium");
+    private final static String HIGH = zapProperty.getProperty("High");
     public static ScanningProxy zapScanner;
     private static Spider zapSpider;
     private final static String[] policyNames = {"directory-browsing","cross-site-scripting","sql-injection","path-traversal","remote-file-inclusion","server-side-include",
