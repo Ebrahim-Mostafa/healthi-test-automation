@@ -336,7 +336,7 @@
                         -Dcucumber.options="--plugin io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm"
                     </argLine>
                     <suiteXmlFiles>
-<!--                        <suiteXmlFile>${basedir}/testng.xml</suiteXmlFile>-->
+                        <suiteXmlFile>${basedir}/testng.xml</suiteXmlFile>
                         <suiteXmlFile>${basedir}/testngCucumber.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <systemProperties>
