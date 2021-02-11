@@ -18,9 +18,9 @@ public class LoadProperties {
     public static Properties zapProperty =
             loadProperties(System.getProperty("user.dir") +
                     File.separator + "src" + File.separator + "test" + File.separator + "resources" + File.separator + "zap.properties");
-    public static Properties qmetryProperty =
-            loadProperties(System.getProperty("user.dir") +
-                    File.separator + "src" + File.separator + "test" + File.separator + "resources" + File.separator + "qmetry.properties");
+    //    public static Properties qmetryProperty =
+//            loadProperties(System.getProperty("user.dir") +
+//                    File.separator + "src" + File.separator + "test" + File.separator + "resources" + File.separator + "qmetry.properties");
     public static String propertyFilePath = System.getProperty("user.dir") +
             File.separator + "src" + File.separator + "test" + File.separator + "resources" + File.separator + "qmetry.properties";
 

@@ -1,9 +1,11 @@
 package Analyzer;
 
+import Jira.JiraCreateIssue;
 import org.testng.IRetryAnalyzer;
+import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class RetryAnalyzer implements IRetryAnalyzer {
+public class RetryAnalyzer implements IRetryAnalyzer , ITestListener {
 
     private int counter = 0;
     private static int maxTry = 1;
@@ -13,7 +15,8 @@ public class RetryAnalyzer implements IRetryAnalyzer {
         if (!iTestResult.isSuccess()) {                      //Check if test not succeed
             if (counter < maxTry) {                            //Check if maxtry count is reached
                 counter++;                                     //Increase the maxTry count by 1
-                iTestResult.setStatus(ITestResult.FAILURE);  //Mark test as failed
+                iTestResult.setStatus(ITestResult.FAILURE);    //Mark test as failed
+                JiraCreateIssue.jiraTestFailure(iTestResult);
                 return true;                                 //Tells TestNG to re-run the test
             } else {
                 iTestResult.setStatus(ITestResult.FAILURE);  //If maxCount reached,test marked as failed
