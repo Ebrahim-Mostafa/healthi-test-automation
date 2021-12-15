@@ -76,3 +76,7 @@ Run these Commands:<br />
 In the above case, it was already installed, so you a message as 'Scoop is already installed'. You can run 'scoop update' to get the latest version any time, To install Allure, using Scoop, run the below command:<br />
 
 > scoop install allure <br />
+
+## Mac OS X Installation -<br />
+
+>brew install allure
