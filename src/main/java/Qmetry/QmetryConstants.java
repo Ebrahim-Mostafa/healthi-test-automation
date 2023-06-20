@@ -31,7 +31,6 @@ public class QmetryConstants {
     public static final String ATTACHE_FILE = "automation.qmetry.attachefile";
 //    public static Properties p;
 public static Properties p =
-        loadProperties(System.getProperty("user.dir") +
-                File.separator + "src" + File.separator + "test" + File.separator + "resources" + File.separator + "qmetry.properties");
+        loadProperties(System.getProperty("user.dir") + File.separator + "qmetry.properties");
 
 }

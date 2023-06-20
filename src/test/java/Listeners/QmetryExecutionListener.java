@@ -72,8 +72,7 @@ public class QmetryExecutionListener implements IExecutionListener {
             System.out.println("Test Run Started");
 //            InputStream is = new FileInputStream(System.getProperty("user.dir") +
 //                    File.separator + "src" + File.separator + "test" + File.separator + "resources" + File.separator + "qmetry.properties");
-            fileLocation =  System.getProperty("user.dir") +
-                    File.separator + "src" + File.separator + "test" + File.separator + "resources" + File.separator + "qmetry.properties";
+            fileLocation =  System.getProperty("user.dir") + File.separator + "qmetry.properties";
             InputStream is = new FileInputStream(fileLocation);
             p = new Properties();
             p.load(is);
